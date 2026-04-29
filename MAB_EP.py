@@ -17,7 +17,7 @@ lib_path = "gen_newlibs/"
 start=time.time()
 abc_cmd = "read %s;read %s; map; write %s; read %s;read -m %s; ps; topo; upsize; dnsize; stime; " % (genlib_origin, design, temp_blif, lib_origin, temp_blif)
 print(abc_cmd)
-res = subprocess.check_output(('abc', '-c', abc_cmd))
+res = subprocess.check_output(('wsl', 'abc', '-c', abc_cmd))
 print(res)
 match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", str(res))
 match_a = re.search(r"Area\s*=\s*([\d.]+)", str(res))
@@ -48,7 +48,7 @@ def technology_mapper(genlib_origin, partial_cell_library):
     out_gen.close() 
 
     abc_cmd = "read %s;read %s; map; write %s; read %s;read -m %s; ps; topo; upsize; dnsize; stime; " % (output_genlib_file, design, temp_blif, lib_origin, temp_blif)
-    res = subprocess.check_output(('abc', '-c', abc_cmd))
+    res = subprocess.check_output(('wsl', 'abc', '-c', abc_cmd))
     match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", str(res))
     match_a = re.search(r"Area\s*=\s*([\d.]+)", str(res))
     if match_d and match_a:

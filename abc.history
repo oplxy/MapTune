@@ -1,0 +1,4 @@
+source -s abc.rc
+exit
+strash
+show
