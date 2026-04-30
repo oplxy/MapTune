@@ -4,6 +4,7 @@ import numpy as np
 import subprocess
 import re
 import sys
+import os
 import random
 from collections import deque
 import time
@@ -11,6 +12,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
+import matplotlib.pyplot as plt
 
 class ReplayBuffer:
     def __init__(self, capacity):
@@ -84,7 +86,7 @@ class GateSelectionEnv(gym.Env):
                 out_gen.write(line + '\n')
 
         # Execute the mapping command using ABC
-        abc_cmd = f"abc -c 'read {output_genlib_file}; read {self.design}; map -a; write {temp_blif}; read {lib_origin}; read -m {temp_blif}; ps; topo; upsize; dnsize; stime;'"
+        abc_cmd = f"wsl abc -c 'read {output_genlib_file}; read {self.design}; map -a; write {temp_blif}; read {lib_origin}; read -m {temp_blif}; ps; topo; upsize; dnsize; stime;'"
         try:
             res = subprocess.check_output(abc_cmd, shell=True, text=True)
             match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", res)
@@ -175,10 +177,14 @@ class DDQNAgent:
 def train_agent(num_episodes, agent, env, batch_size, buffer_size):
     replay_buffer = deque(maxlen=buffer_size)
     highest_reward = float('-inf')
+    adp_history = []
+    best_adp_history = []
+    current_best_adp = float('inf')
 
     for episode in range(num_episodes):
         state = env.reset()
         done = False
+        episode_adp = float('inf')
 
         while not done:
             action = agent.select_action(state)
@@ -186,16 +192,26 @@ def train_agent(num_episodes, agent, env, batch_size, buffer_size):
             replay_buffer.append((state, action, reward, next_state, done))
             state = next_state
 
-            if done and reward > highest_reward:
-                highest_reward = reward
-                best_result = (delay, area)
-                print('Current Best Result: ', best_result)
+            if done:
+                if delay != float('inf') and area != float('inf'):
+                    episode_adp = delay * area
+                    if episode_adp < current_best_adp:
+                        current_best_adp = episode_adp
+
+                if reward > highest_reward:
+                    highest_reward = reward
+                    best_result = (delay, area)
+                    print('Current Best Result: ', best_result)
 
             if len(replay_buffer) >= batch_size:
                 batch = random.sample(replay_buffer, batch_size)
                 agent.update_batch(batch)  # Process batch update
 
+        adp_history.append(episode_adp)
+        best_adp_history.append(current_best_adp)
         print(f"Episode {episode + 1}, Highest Reward = {highest_reward}")
+
+    return adp_history, best_adp_history
 
 
 genlib_origin = sys.argv[-1]
@@ -205,7 +221,7 @@ sample_gate = int(sys.argv[-3])
 temp_blif = "temp_blifs/" + design[:-5] + "_ddqn_temp.blif"
 lib_path = "gen_newlibs/"
 abc_cmd = "read %s;read %s; map -a; write %s; read %s;read -m %s; ps; topo; upsize; dnsize; stime; " % (genlib_origin, design, temp_blif, lib_origin, temp_blif)
-res = subprocess.check_output(('abc', '-c', abc_cmd))
+res = subprocess.check_output(('wsl', 'abc', '-c', abc_cmd))
 match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", str(res))
 match_a = re.search(r"Area\s*=\s*([\d.]+)", str(res))
 # Baseline
@@ -220,13 +236,44 @@ f.close()
 total_gates = len(f_lines)
 state_size = total_gates
 action_size = total_gates
-num_episodes = 5000
+num_episodes = 200
 batch_size = 10
 buffer_size = 10000
 env = GateSelectionEnv(genlib_origin, lib_path, design, total_gates, sample_gate, max_delay, max_area)
 agent = DDQNAgent(state_size, action_size)
 start=time.time()
-train_agent(num_episodes, agent, env, batch_size, buffer_size)
+adp_history, best_adp_history = train_agent(num_episodes, agent, env, batch_size, buffer_size)
 end=time.time()
 runtime=end-start
 print('Total time: ', runtime)
+
+# ==========================================
+# ADP Optimization Plot
+# ==========================================
+print("\n>> Generating ADP Optimization Plot...")
+plt.figure(figsize=(10, 6))
+
+episodes_x = list(range(num_episodes))
+baseline_adp = max_delay * max_area
+clean_best_adp = [val if val != float('inf') else baseline_adp for val in best_adp_history]
+plt.plot(episodes_x, clean_best_adp, label='Best ADP Over Time', color='blue', linewidth=2.5)
+
+valid_adps = [(idx, val) for idx, val in enumerate(adp_history) if val != float('inf')]
+if valid_adps:
+    x_vals, y_vals = zip(*valid_adps)
+    plt.scatter(x_vals, y_vals, color='red', alpha=0.3, label='Episode Sampled ADP', s=15)
+
+plt.axhline(y=baseline_adp, color='green', linestyle='--', linewidth=2, label='Baseline ADP')
+
+plt.title(f"Batched DDQN ADP Optimization\nState: No Feature + Selection Mask (Design: {design})")
+plt.xlabel("Training Episodes")
+plt.ylabel("Area-Delay Product (ADP)")
+plt.legend()
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+
+# Add training time and best ADP annotation
+plt.text(0.8, 0.98, f'Training Time: {runtime:.2f}s\nBest ADP: {clean_best_adp[-1]:.2f}', transform=plt.gca().transAxes, fontsize=10, verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+
+plt.savefig("records/adp_improvement.png", dpi=300)
+print(">> Visualization successfully saved to records/adp_improvement.png")

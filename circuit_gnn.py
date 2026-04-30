@@ -14,7 +14,7 @@ class CircuitGNN(nn.Module):
     Supports multi-format conversion (.v, .bench, .blif), AIGER parsing, 
     and unified weight persistence.
     """
-    def __init__(self, node_in_dim=3, hidden_dim=64, signature_dim=16):
+    def __init__(self, node_in_dim=3, hidden_dim=64, signature_dim=24):
         super(CircuitGNN, self).__init__()
         
         # 3-Layer GCN to capture logic topology

@@ -97,7 +97,7 @@ class ContrastiveCircuitDataset(torch.utils.data.Dataset):
 # ==========================================
 import random # Make sure this is imported at the top
 
-def train_gnn(data_dir, epochs=20):
+def train_gnn(data_dir, epochs=40):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f">> Training initiated on: {device}")
     
@@ -222,7 +222,7 @@ def visualize_results(model, data_dir):
     plt.xticks(rotation=45, ha='right', fontsize=10)
     plt.yticks(rotation=0, fontsize=10)
     plt.tight_layout()
-    plt.show()
+    plt.savefig("records/trained_signatures.png", dpi=300)
 
 # ==========================================
 # 4. EXECUTION
@@ -232,7 +232,7 @@ if __name__ == "__main__":
     DATA_PATH = base_dir / "benchmarks"
 
     if DATA_PATH.exists():
-        trained_model = train_gnn(str(DATA_PATH), epochs=20)
+        trained_model = train_gnn(str(DATA_PATH), epochs=40)
         visualize_results(trained_model, str(DATA_PATH))
     else:
         print(f">> Error: Directory {DATA_PATH} not found.")

@@ -11,6 +11,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
+import matplotlib.pyplot as plt
 
 class ReplayBuffer:
     def __init__(self, capacity):
@@ -81,7 +82,7 @@ class GateSelectionEnv(gym.Env):
                 out_gen.write(line + '\n')
 
         # Execute the mapping command using ABC
-        abc_cmd = f"abc -c 'read {output_genlib_file}; read {self.design}; map -a; write {temp_blif}; read {lib_origin}; read -m {temp_blif}; ps; topo; upsize; dnsize; stime;'"
+        abc_cmd = f"wsl abc -c 'read {output_genlib_file}; read {self.design}; map -a; write {temp_blif}; read {lib_origin}; read -m {temp_blif}; ps; topo; upsize; dnsize; stime;'"
         try:
             res = subprocess.check_output(abc_cmd, shell=True, text=True)
             match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", res)
@@ -162,14 +163,19 @@ class DQNAgent:
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
+        return loss.item()
 
 def train_agent(num_episodes, agent, env, batch_size, buffer_size):
     replay_buffer = deque(maxlen=buffer_size)
     highest_reward = float('-inf')
+    episode_rewards = []
+    loss_history = []
+    best_reward_history = []
 
     for episode in range(num_episodes):
         state = env.reset()
         done = False
+        episode_reward = 0.0
 
         while not done:
             action = agent.select_action(state)
@@ -177,16 +183,52 @@ def train_agent(num_episodes, agent, env, batch_size, buffer_size):
             replay_buffer.append((state, action, reward, next_state, done))
             state = next_state
 
-            if done and reward > highest_reward:
-                highest_reward = reward
-                best_result = (delay, area)
-                print('Current Best Result: ', best_result)
+            if done:
+                episode_reward = reward
+                if reward > highest_reward:
+                    highest_reward = reward
+                    best_result = (delay, area)
+                    print('Current Best Result: ', best_result)
 
             if len(replay_buffer) >= batch_size:
                 batch = random.sample(replay_buffer, batch_size)
-                agent.update_batch(batch)  # Process batch update
+                loss = agent.update_batch(batch)  # Process batch update
+                if loss is not None:
+                    loss_history.append(loss)
 
-        print(f"Episode {episode + 1}, Highest Reward = {highest_reward}")
+        episode_rewards.append(episode_reward)
+        best_reward_history.append(highest_reward)
+        print(f"Episode {episode + 1}, Episode Reward = {episode_reward:.4f}, Highest Reward = {highest_reward:.4f}")
+
+    # Plot training progress
+    plt.figure(figsize=(12, 9))
+    plt.subplot(3, 1, 1)
+    plt.plot(episode_rewards, label='Episode Reward')
+    plt.ylabel('Reward')
+    plt.title('DQN Training Progress')
+    plt.grid(True)
+    plt.legend()
+
+    plt.subplot(3, 1, 2)
+    if loss_history:
+        plt.plot(loss_history, label='Training Loss', color='orange')
+        plt.ylabel('Loss')
+        plt.grid(True)
+        plt.legend()
+    else:
+        plt.text(0.5, 0.5, 'No loss values recorded', ha='center', va='center')
+        plt.axis('off')
+
+    plt.subplot(3, 1, 3)
+    plt.plot(best_reward_history, label='Best Reward', color='green')
+    plt.xlabel('Episode')
+    plt.ylabel('Best Reward')
+    plt.grid(True)
+    plt.legend()
+
+    plt.tight_layout()
+    plt.savefig('records/training_progress.png')
+    print('Training progress plot saved to training_progress.png')
 
 
 genlib_origin = sys.argv[-1]
@@ -196,7 +238,7 @@ sample_gate = int(sys.argv[-3])
 temp_blif = "temp_blifs/" + design[:-5] + "_dqn_temp.blif"
 lib_path = "gen_newlibs/"
 abc_cmd = "read %s;read %s; map -a; write %s; read %s;read -m %s; ps; topo; upsize; dnsize; stime; " % (genlib_origin, design, temp_blif, lib_origin, temp_blif)
-res = subprocess.check_output(('abc', '-c', abc_cmd))
+res = subprocess.check_output(('wsl', 'abc', '-c', abc_cmd))
 match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", str(res))
 match_a = re.search(r"Area\s*=\s*([\d.]+)", str(res))
 # Baseline
@@ -211,7 +253,7 @@ f.close()
 total_gates = len(f_lines)
 state_size = total_gates
 action_size = total_gates
-num_episodes = 5000
+num_episodes = 200
 batch_size = 10
 buffer_size = 10000
 env = GateSelectionEnv(genlib_origin, lib_path, design, total_gates, sample_gate, max_delay, max_area)
