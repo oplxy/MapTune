@@ -2,3 +2,9 @@ source -s abc.rc
 exit
 strash
 show
+read benchmarks/b10.bench
+read 7nm.lib
+read_lib 7nm.lib
+amap
+-h amap
+amap -h

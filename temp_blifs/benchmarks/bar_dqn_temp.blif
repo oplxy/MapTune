@@ -1,0 +1,1336 @@
+# Benchmark "top" written by ABC on Wed May 13 15:50:55 2026
+.model top
+.inputs a[0] a[1] a[2] a[3] a[4] a[5] a[6] a[7] a[8] a[9] a[10] a[11] a[12] \
+ a[13] a[14] a[15] a[16] a[17] a[18] a[19] a[20] a[21] a[22] a[23] a[24] \
+ a[25] a[26] a[27] a[28] a[29] a[30] a[31] a[32] a[33] a[34] a[35] a[36] \
+ a[37] a[38] a[39] a[40] a[41] a[42] a[43] a[44] a[45] a[46] a[47] a[48] \
+ a[49] a[50] a[51] a[52] a[53] a[54] a[55] a[56] a[57] a[58] a[59] a[60] \
+ a[61] a[62] a[63] a[64] a[65] a[66] a[67] a[68] a[69] a[70] a[71] a[72] \
+ a[73] a[74] a[75] a[76] a[77] a[78] a[79] a[80] a[81] a[82] a[83] a[84] \
+ a[85] a[86] a[87] a[88] a[89] a[90] a[91] a[92] a[93] a[94] a[95] a[96] \
+ a[97] a[98] a[99] a[100] a[101] a[102] a[103] a[104] a[105] a[106] a[107] \
+ a[108] a[109] a[110] a[111] a[112] a[113] a[114] a[115] a[116] a[117] \
+ a[118] a[119] a[120] a[121] a[122] a[123] a[124] a[125] a[126] a[127] \
+ shift[0] shift[1] shift[2] shift[3] shift[4] shift[5] shift[6]
+.outputs result[0] result[1] result[2] result[3] result[4] result[5] \
+ result[6] result[7] result[8] result[9] result[10] result[11] result[12] \
+ result[13] result[14] result[15] result[16] result[17] result[18] \
+ result[19] result[20] result[21] result[22] result[23] result[24] \
+ result[25] result[26] result[27] result[28] result[29] result[30] \
+ result[31] result[32] result[33] result[34] result[35] result[36] \
+ result[37] result[38] result[39] result[40] result[41] result[42] \
+ result[43] result[44] result[45] result[46] result[47] result[48] \
+ result[49] result[50] result[51] result[52] result[53] result[54] \
+ result[55] result[56] result[57] result[58] result[59] result[60] \
+ result[61] result[62] result[63] result[64] result[65] result[66] \
+ result[67] result[68] result[69] result[70] result[71] result[72] \
+ result[73] result[74] result[75] result[76] result[77] result[78] \
+ result[79] result[80] result[81] result[82] result[83] result[84] \
+ result[85] result[86] result[87] result[88] result[89] result[90] \
+ result[91] result[92] result[93] result[94] result[95] result[96] \
+ result[97] result[98] result[99] result[100] result[101] result[102] \
+ result[103] result[104] result[105] result[106] result[107] result[108] \
+ result[109] result[110] result[111] result[112] result[113] result[114] \
+ result[115] result[116] result[117] result[118] result[119] result[120] \
+ result[121] result[122] result[123] result[124] result[125] result[126] \
+ result[127]
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[0] Y=new_n264
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[3] Y=new_n265
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[4] Y=new_n266
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[7] Y=new_n267
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[8] Y=new_n268
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[11] Y=new_n269
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[12] Y=new_n270
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[15] Y=new_n271
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[16] Y=new_n272
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[19] Y=new_n273
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[20] Y=new_n274
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[23] Y=new_n275
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[24] Y=new_n276
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[27] Y=new_n277
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[28] Y=new_n278
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[31] Y=new_n279
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[32] Y=new_n280
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[35] Y=new_n281
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[36] Y=new_n282
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[38] Y=new_n283
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[39] Y=new_n284
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[40] Y=new_n285
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[43] Y=new_n286
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[44] Y=new_n287
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[45] Y=new_n288
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[46] Y=new_n289
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[47] Y=new_n290
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[48] Y=new_n291
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[51] Y=new_n292
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[52] Y=new_n293
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[55] Y=new_n294
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[56] Y=new_n295
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[59] Y=new_n296
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[60] Y=new_n297
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[63] Y=new_n298
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[64] Y=new_n299
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[67] Y=new_n300
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[68] Y=new_n301
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[71] Y=new_n302
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[72] Y=new_n303
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[75] Y=new_n304
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[76] Y=new_n305
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[79] Y=new_n306
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[80] Y=new_n307
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[83] Y=new_n308
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[84] Y=new_n309
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[87] Y=new_n310
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[88] Y=new_n311
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[91] Y=new_n312
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[92] Y=new_n313
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[95] Y=new_n314
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[96] Y=new_n315
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[99] Y=new_n316
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[100] Y=new_n317
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[103] Y=new_n318
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[104] Y=new_n319
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[107] Y=new_n320
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[108] Y=new_n321
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[111] Y=new_n322
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[112] Y=new_n323
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[115] Y=new_n324
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[116] Y=new_n325
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[119] Y=new_n326
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[120] Y=new_n327
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[123] Y=new_n328
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[124] Y=new_n329
+.gate sky130_fd_sc_hd__clkinv_1                         A=a[127] Y=new_n330
+.gate sky130_fd_sc_hd__clkinv_1                         A=shift[0] Y=new_n331
+.gate sky130_fd_sc_hd__clkinv_1                         A=shift[1] Y=new_n332
+.gate sky130_fd_sc_hd__clkinv_1                         A=shift[3] Y=new_n333
+.gate sky130_fd_sc_hd__clkinv_1                         A=shift[4] Y=new_n334
+.gate sky130_fd_sc_hd__clkinv_1                         A=shift[5] Y=new_n335
+.gate sky130_fd_sc_hd__clkinv_1                         A=shift[6] Y=new_n336
+.gate sky130_fd_sc_hd__and3_2                           A=a[77] B=shift[0] C=shift[1] X=new_n337
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n306 SLEEP=new_n331 X=new_n338
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n307 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n338 Y=new_n339
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[78] A2=new_n331 A3=shift[1] B1=new_n337 C1=new_n339 X=new_n340
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=new_n333 SLEEP=shift[2] X=new_n341
+.gate sky130_fd_sc_hd__and3_2                           A=a[73] B=shift[0] C=shift[1] X=new_n342
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n304 SLEEP=new_n331 X=new_n343
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n305 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n343 Y=new_n344
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[74] A2=new_n331 A3=shift[1] B1=new_n342 C1=new_n344 X=new_n345
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=shift[2] SLEEP=shift[3] X=new_n346
+.gate sky130_fd_sc_hd__and3_2                           A=a[65] B=shift[0] C=shift[1] X=new_n347
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n300 SLEEP=new_n331 X=new_n348
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n301 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n348 Y=new_n349
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[66] A2=new_n331 A3=shift[1] B1=new_n347 C1=new_n349 X=new_n350
+.gate sky130_fd_sc_hd__and3_2                           A=a[69] B=shift[0] C=shift[1] X=new_n351
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n302 SLEEP=new_n331 X=new_n352
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n303 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n352 Y=new_n353
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[70] A2=new_n331 A3=shift[1] B1=new_n351 C1=new_n353 X=new_n354
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=shift[3] SLEEP=shift[2] X=new_n355
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n350 B1=new_n354 B2=new_n355 X=new_n356
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n340 B2=new_n341 A1=new_n345 A2=new_n346 C1=new_n356 X=new_n357
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=shift[5] SLEEP=new_n334 X=new_n358
+.gate sky130_fd_sc_hd__and3_2                           A=a[93] B=shift[0] C=shift[1] X=new_n359
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n314 SLEEP=new_n331 X=new_n360
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n315 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n360 Y=new_n361
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[94] A2=new_n331 A3=shift[1] B1=new_n359 C1=new_n361 X=new_n362
+.gate sky130_fd_sc_hd__and3_2                           A=a[89] B=shift[0] C=shift[1] X=new_n363
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n312 SLEEP=new_n331 X=new_n364
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n313 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n364 Y=new_n365
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[90] A2=new_n331 A3=shift[1] B1=new_n363 C1=new_n365 X=new_n366
+.gate sky130_fd_sc_hd__and3_2                           A=a[81] B=shift[0] C=shift[1] X=new_n367
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n308 SLEEP=new_n331 X=new_n368
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n309 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n368 Y=new_n369
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[82] A2=new_n331 A3=shift[1] B1=new_n367 C1=new_n369 X=new_n370
+.gate sky130_fd_sc_hd__and3_2                           A=a[85] B=shift[0] C=shift[1] X=new_n371
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n310 SLEEP=new_n331 X=new_n372
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n311 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n372 Y=new_n373
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[86] A2=new_n331 A3=shift[1] B1=new_n371 C1=new_n373 X=new_n374
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n370 B1=new_n355 B2=new_n374 X=new_n375
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n362 A1=new_n346 A2=new_n366 C1=new_n375 X=new_n376
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=shift[5] SLEEP=shift[4] X=new_n377
+.gate sky130_fd_sc_hd__and3_2                           A=a[125] B=shift[0] C=shift[1] X=new_n378
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n330 SLEEP=new_n331 X=new_n379
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n264 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n379 Y=new_n380
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[126] A2=new_n331 A3=shift[1] B1=new_n378 C1=new_n380 X=new_n381
+.gate sky130_fd_sc_hd__and3_2                           A=a[121] B=shift[0] C=shift[1] X=new_n382
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n328 SLEEP=new_n331 X=new_n383
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n329 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n383 Y=new_n384
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[122] A2=new_n331 A3=shift[1] B1=new_n382 C1=new_n384 X=new_n385
+.gate sky130_fd_sc_hd__and3_2                           A=a[113] B=shift[0] C=shift[1] X=new_n386
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n324 SLEEP=new_n331 X=new_n387
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n325 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n387 Y=new_n388
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[114] A2=new_n331 A3=shift[1] B1=new_n386 C1=new_n388 X=new_n389
+.gate sky130_fd_sc_hd__and3_2                           A=a[117] B=shift[0] C=shift[1] X=new_n390
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n326 SLEEP=new_n331 X=new_n391
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n327 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n391 Y=new_n392
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[118] A2=new_n331 A3=shift[1] B1=new_n390 C1=new_n392 X=new_n393
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n389 B1=new_n355 B2=new_n393 X=new_n394
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n381 A1=new_n346 A2=new_n385 C1=new_n394 X=new_n395
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=new_n335 SLEEP=shift[4] X=new_n396
+.gate sky130_fd_sc_hd__and3_2                           A=a[109] B=shift[0] C=shift[1] X=new_n397
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n322 SLEEP=new_n331 X=new_n398
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n323 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n398 Y=new_n399
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[110] A2=new_n331 A3=shift[1] B1=new_n397 C1=new_n399 X=new_n400
+.gate sky130_fd_sc_hd__and3_2                           A=a[105] B=shift[0] C=shift[1] X=new_n401
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n320 SLEEP=new_n331 X=new_n402
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n321 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n402 Y=new_n403
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[106] A2=new_n331 A3=shift[1] B1=new_n401 C1=new_n403 X=new_n404
+.gate sky130_fd_sc_hd__and3_2                           A=a[97] B=shift[0] C=shift[1] X=new_n405
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n316 SLEEP=new_n331 X=new_n406
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n317 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n406 Y=new_n407
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[98] A2=new_n331 A3=shift[1] B1=new_n405 C1=new_n407 X=new_n408
+.gate sky130_fd_sc_hd__and3_2                           A=a[101] B=shift[0] C=shift[1] X=new_n409
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n318 SLEEP=new_n331 X=new_n410
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n319 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n410 Y=new_n411
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[102] A2=new_n331 A3=shift[1] B1=new_n409 C1=new_n411 X=new_n412
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n408 B1=new_n355 B2=new_n412 X=new_n413
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n400 A1=new_n346 A2=new_n404 C1=new_n413 X=new_n414
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=new_n335 SLEEP=new_n334 X=new_n415
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n395 B1=new_n414 B2=new_n415 X=new_n416
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n357 B2=new_n358 A1=new_n376 A2=new_n377 C1=new_n416 X=new_n417
+.gate sky130_fd_sc_hd__and3_2                           A=a[13] B=shift[0] C=shift[1] X=new_n418
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n271 SLEEP=new_n331 X=new_n419
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n272 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n419 Y=new_n420
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[14] A2=new_n331 A3=shift[1] B1=new_n418 C1=new_n420 X=new_n421
+.gate sky130_fd_sc_hd__and3_2                           A=a[9] B=shift[0] C=shift[1] X=new_n422
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n269 SLEEP=new_n331 X=new_n423
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n270 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n423 Y=new_n424
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[10] A2=new_n331 A3=shift[1] B1=new_n422 C1=new_n424 X=new_n425
+.gate sky130_fd_sc_hd__and3_2                           A=a[1] B=shift[0] C=shift[1] X=new_n426
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n265 SLEEP=new_n331 X=new_n427
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n266 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n427 Y=new_n428
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[2] A2=new_n331 A3=shift[1] B1=new_n426 C1=new_n428 X=new_n429
+.gate sky130_fd_sc_hd__and3_2                           A=a[5] B=shift[0] C=shift[1] X=new_n430
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n267 SLEEP=new_n331 X=new_n431
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n268 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n431 Y=new_n432
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[6] A2=new_n331 A3=shift[1] B1=new_n430 C1=new_n432 X=new_n433
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n429 B1=new_n355 B2=new_n433 X=new_n434
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n421 A1=new_n346 A2=new_n425 C1=new_n434 X=new_n435
+.gate sky130_fd_sc_hd__and3_2                           A=a[29] B=shift[0] C=shift[1] X=new_n436
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n279 SLEEP=new_n331 X=new_n437
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n280 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n437 Y=new_n438
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[30] A2=new_n331 A3=shift[1] B1=new_n436 C1=new_n438 X=new_n439
+.gate sky130_fd_sc_hd__and3_2                           A=a[25] B=shift[0] C=shift[1] X=new_n440
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n277 SLEEP=new_n331 X=new_n441
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n278 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n441 Y=new_n442
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[26] A2=new_n331 A3=shift[1] B1=new_n440 C1=new_n442 X=new_n443
+.gate sky130_fd_sc_hd__and3_2                           A=a[17] B=shift[0] C=shift[1] X=new_n444
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n273 SLEEP=new_n331 X=new_n445
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n274 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n445 Y=new_n446
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[18] A2=new_n331 A3=shift[1] B1=new_n444 C1=new_n446 X=new_n447
+.gate sky130_fd_sc_hd__and3_2                           A=a[21] B=shift[0] C=shift[1] X=new_n448
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n275 SLEEP=new_n331 X=new_n449
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n276 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n449 Y=new_n450
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[22] A2=new_n331 A3=shift[1] B1=new_n448 C1=new_n450 X=new_n451
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n447 B1=new_n355 B2=new_n451 X=new_n452
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n439 A1=new_n346 A2=new_n443 C1=new_n452 X=new_n453
+.gate sky130_fd_sc_hd__and3_2                           A=a[61] B=shift[0] C=shift[1] X=new_n454
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n298 SLEEP=new_n331 X=new_n455
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n299 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n455 Y=new_n456
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[62] A2=new_n331 A3=shift[1] B1=new_n454 C1=new_n456 X=new_n457
+.gate sky130_fd_sc_hd__and3_2                           A=a[57] B=shift[0] C=shift[1] X=new_n458
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n296 SLEEP=new_n331 X=new_n459
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n297 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n459 Y=new_n460
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[58] A2=new_n331 A3=shift[1] B1=new_n458 C1=new_n460 X=new_n461
+.gate sky130_fd_sc_hd__and3_2                           A=a[49] B=shift[0] C=shift[1] X=new_n462
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n292 SLEEP=new_n331 X=new_n463
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n293 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n463 Y=new_n464
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[50] A2=new_n331 A3=shift[1] B1=new_n462 C1=new_n464 X=new_n465
+.gate sky130_fd_sc_hd__and3_2                           A=a[53] B=shift[0] C=shift[1] X=new_n466
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n294 SLEEP=new_n331 X=new_n467
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n295 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n467 Y=new_n468
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[54] A2=new_n331 A3=shift[1] B1=new_n466 C1=new_n468 X=new_n469
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n465 B1=new_n355 B2=new_n469 X=new_n470
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n457 A1=new_n346 A2=new_n461 C1=new_n470 X=new_n471
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n288 SLEEP=new_n331 X=new_n472
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n289 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n472 Y=new_n473
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n290 SLEEP=new_n331 X=new_n474
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n291 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n474 Y=new_n475
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n473 SLEEP=new_n475 X=new_n476
+.gate sky130_fd_sc_hd__and3_2                           A=a[41] B=shift[0] C=shift[1] X=new_n477
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n286 SLEEP=new_n331 X=new_n478
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n287 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n478 Y=new_n479
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[42] A2=new_n331 A3=shift[1] B1=new_n477 C1=new_n479 X=new_n480
+.gate sky130_fd_sc_hd__and3_2                           A=a[33] B=shift[0] C=shift[1] X=new_n481
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n281 SLEEP=new_n331 X=new_n482
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n282 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n482 Y=new_n483
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[34] A2=new_n331 A3=shift[1] B1=new_n481 C1=new_n483 X=new_n484
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n285 SLEEP=shift[0] X=new_n485
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=new_n332 SLEEP=new_n485 X=new_n486
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n283 SLEEP=shift[0] X=new_n487
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n284 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n487 Y=new_n488
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[37] A2=shift[0] A3=shift[1] B1=new_n486 C1=new_n488 X=new_n489
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n484 B1=new_n355 B2=new_n489 X=new_n490
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n476 A1=new_n346 A2=new_n480 C1=new_n490 X=new_n491
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n471 B1=new_n415 B2=new_n491 X=new_n492
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n435 A1=new_n377 A2=new_n453 C1=new_n492 X=new_n493
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n493 A2=new_n417 Y=new_n494
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n494 Y=result[0]
+.gate sky130_fd_sc_hd__and3_2                           A=a[81] B=new_n331 C=new_n332 X=new_n496
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n306 SLEEP=shift[0] X=new_n497
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n307 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n497 Y=new_n498
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[78] A2=shift[0] A3=shift[1] B1=new_n496 C1=new_n498 X=new_n499
+.gate sky130_fd_sc_hd__and3_2                           A=a[77] B=new_n331 C=new_n332 X=new_n500
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n304 SLEEP=shift[0] X=new_n501
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n305 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n501 Y=new_n502
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[74] A2=shift[0] A3=shift[1] B1=new_n500 C1=new_n502 X=new_n503
+.gate sky130_fd_sc_hd__and3_2                           A=a[69] B=new_n331 C=new_n332 X=new_n504
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n300 SLEEP=shift[0] X=new_n505
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n301 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n505 Y=new_n506
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[66] A2=shift[0] A3=shift[1] B1=new_n504 C1=new_n506 X=new_n507
+.gate sky130_fd_sc_hd__and3_2                           A=a[73] B=new_n331 C=new_n332 X=new_n508
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n302 SLEEP=shift[0] X=new_n509
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n303 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n509 Y=new_n510
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[70] A2=shift[0] A3=shift[1] B1=new_n508 C1=new_n510 X=new_n511
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n507 B1=new_n355 B2=new_n511 X=new_n512
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n499 A1=new_n346 A2=new_n503 C1=new_n512 X=new_n513
+.gate sky130_fd_sc_hd__and3_2                           A=a[97] B=new_n331 C=new_n332 X=new_n514
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n314 SLEEP=shift[0] X=new_n515
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n315 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n515 Y=new_n516
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[94] A2=shift[0] A3=shift[1] B1=new_n514 C1=new_n516 X=new_n517
+.gate sky130_fd_sc_hd__and3_2                           A=a[93] B=new_n331 C=new_n332 X=new_n518
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n312 SLEEP=shift[0] X=new_n519
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n313 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n519 Y=new_n520
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[90] A2=shift[0] A3=shift[1] B1=new_n518 C1=new_n520 X=new_n521
+.gate sky130_fd_sc_hd__and3_2                           A=a[85] B=new_n331 C=new_n332 X=new_n522
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n308 SLEEP=shift[0] X=new_n523
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n309 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n523 Y=new_n524
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[82] A2=shift[0] A3=shift[1] B1=new_n522 C1=new_n524 X=new_n525
+.gate sky130_fd_sc_hd__and3_2                           A=a[89] B=new_n331 C=new_n332 X=new_n526
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n310 SLEEP=shift[0] X=new_n527
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n311 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n527 Y=new_n528
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[86] A2=shift[0] A3=shift[1] B1=new_n526 C1=new_n528 X=new_n529
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n525 B1=new_n355 B2=new_n529 X=new_n530
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n517 A1=new_n346 A2=new_n521 C1=new_n530 X=new_n531
+.gate sky130_fd_sc_hd__and3_2                           A=a[1] B=new_n331 C=new_n332 X=new_n532
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n330 SLEEP=shift[0] X=new_n533
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n264 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n533 Y=new_n534
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[126] A2=shift[0] A3=shift[1] B1=new_n532 C1=new_n534 X=new_n535
+.gate sky130_fd_sc_hd__and3_2                           A=a[125] B=new_n331 C=new_n332 X=new_n536
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n328 SLEEP=shift[0] X=new_n537
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n329 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n537 Y=new_n538
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[122] A2=shift[0] A3=shift[1] B1=new_n536 C1=new_n538 X=new_n539
+.gate sky130_fd_sc_hd__and3_2                           A=a[117] B=new_n331 C=new_n332 X=new_n540
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n324 SLEEP=shift[0] X=new_n541
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n325 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n541 Y=new_n542
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[114] A2=shift[0] A3=shift[1] B1=new_n540 C1=new_n542 X=new_n543
+.gate sky130_fd_sc_hd__and3_2                           A=a[121] B=new_n331 C=new_n332 X=new_n544
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n326 SLEEP=shift[0] X=new_n545
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n327 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n545 Y=new_n546
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[118] A2=shift[0] A3=shift[1] B1=new_n544 C1=new_n546 X=new_n547
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n543 B1=new_n355 B2=new_n547 X=new_n548
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n535 A1=new_n346 A2=new_n539 C1=new_n548 X=new_n549
+.gate sky130_fd_sc_hd__and3_2                           A=a[113] B=new_n331 C=new_n332 X=new_n550
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n322 SLEEP=shift[0] X=new_n551
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n323 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n551 Y=new_n552
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[110] A2=shift[0] A3=shift[1] B1=new_n550 C1=new_n552 X=new_n553
+.gate sky130_fd_sc_hd__and3_2                           A=a[109] B=new_n331 C=new_n332 X=new_n554
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n320 SLEEP=shift[0] X=new_n555
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n321 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n555 Y=new_n556
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[106] A2=shift[0] A3=shift[1] B1=new_n554 C1=new_n556 X=new_n557
+.gate sky130_fd_sc_hd__and3_2                           A=a[101] B=new_n331 C=new_n332 X=new_n558
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n316 SLEEP=shift[0] X=new_n559
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n317 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n559 Y=new_n560
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[98] A2=shift[0] A3=shift[1] B1=new_n558 C1=new_n560 X=new_n561
+.gate sky130_fd_sc_hd__and3_2                           A=a[105] B=new_n331 C=new_n332 X=new_n562
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n318 SLEEP=shift[0] X=new_n563
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n319 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n563 Y=new_n564
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[102] A2=shift[0] A3=shift[1] B1=new_n562 C1=new_n564 X=new_n565
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n561 B1=new_n355 B2=new_n565 X=new_n566
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n553 A1=new_n346 A2=new_n557 C1=new_n566 X=new_n567
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n549 B1=new_n415 B2=new_n567 X=new_n568
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n513 A1=new_n377 A2=new_n531 C1=new_n568 X=new_n569
+.gate sky130_fd_sc_hd__and3_2                           A=a[65] B=new_n331 C=new_n332 X=new_n570
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n298 SLEEP=shift[0] X=new_n571
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n299 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n571 Y=new_n572
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[62] A2=shift[0] A3=shift[1] B1=new_n570 C1=new_n572 X=new_n573
+.gate sky130_fd_sc_hd__and3_2                           A=a[61] B=new_n331 C=new_n332 X=new_n574
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n296 SLEEP=shift[0] X=new_n575
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n297 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n575 Y=new_n576
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[58] A2=shift[0] A3=shift[1] B1=new_n574 C1=new_n576 X=new_n577
+.gate sky130_fd_sc_hd__and3_2                           A=a[53] B=new_n331 C=new_n332 X=new_n578
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n292 SLEEP=shift[0] X=new_n579
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n293 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n579 Y=new_n580
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[50] A2=shift[0] A3=shift[1] B1=new_n578 C1=new_n580 X=new_n581
+.gate sky130_fd_sc_hd__and3_2                           A=a[57] B=new_n331 C=new_n332 X=new_n582
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n294 SLEEP=shift[0] X=new_n583
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n295 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n583 Y=new_n584
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[54] A2=shift[0] A3=shift[1] B1=new_n582 C1=new_n584 X=new_n585
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n581 B1=new_n355 B2=new_n585 X=new_n586
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n573 A1=new_n346 A2=new_n577 C1=new_n586 X=new_n587
+.gate sky130_fd_sc_hd__and3_2                           A=a[17] B=new_n331 C=new_n332 X=new_n588
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n271 SLEEP=shift[0] X=new_n589
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n272 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n589 Y=new_n590
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[14] A2=shift[0] A3=shift[1] B1=new_n588 C1=new_n590 X=new_n591
+.gate sky130_fd_sc_hd__and3_2                           A=a[13] B=new_n331 C=new_n332 X=new_n592
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n269 SLEEP=shift[0] X=new_n593
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n270 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n593 Y=new_n594
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[10] A2=shift[0] A3=shift[1] B1=new_n592 C1=new_n594 X=new_n595
+.gate sky130_fd_sc_hd__and3_2                           A=a[5] B=new_n331 C=new_n332 X=new_n596
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n265 SLEEP=shift[0] X=new_n597
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n266 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n597 Y=new_n598
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[2] A2=shift[0] A3=shift[1] B1=new_n596 C1=new_n598 X=new_n599
+.gate sky130_fd_sc_hd__and3_2                           A=a[9] B=new_n331 C=new_n332 X=new_n600
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n267 SLEEP=shift[0] X=new_n601
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n268 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n601 Y=new_n602
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[6] A2=shift[0] A3=shift[1] B1=new_n600 C1=new_n602 X=new_n603
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n599 B1=new_n355 B2=new_n603 X=new_n604
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n591 A1=new_n346 A2=new_n595 C1=new_n604 X=new_n605
+.gate sky130_fd_sc_hd__and3_2                           A=a[49] B=new_n331 C=new_n332 X=new_n606
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n290 SLEEP=shift[0] X=new_n607
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n291 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n607 Y=new_n608
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[46] A2=shift[0] A3=shift[1] B1=new_n606 C1=new_n608 X=new_n609
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n286 SLEEP=shift[0] X=new_n610
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=shift[1] SLEEP=new_n610 X=new_n611
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n287 SLEEP=new_n331 X=new_n612
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n288 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n612 Y=new_n613
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[42] A2=shift[0] A3=shift[1] B1=new_n611 C1=new_n613 X=new_n614
+.gate sky130_fd_sc_hd__and3_2                           A=a[37] B=new_n331 C=new_n332 X=new_n615
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n281 SLEEP=shift[0] X=new_n616
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n282 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n616 Y=new_n617
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[34] A2=shift[0] A3=shift[1] B1=new_n615 C1=new_n617 X=new_n618
+.gate sky130_fd_sc_hd__and3_2                           A=a[40] B=shift[0] C=new_n332 X=new_n619
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n284 SLEEP=shift[0] X=new_n620
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n283 A2=new_n331 A3=new_n332 B1=new_n332 B2=new_n620 Y=new_n621
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[41] A2=new_n331 A3=new_n332 B1=new_n619 C1=new_n621 X=new_n622
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n618 B1=new_n355 B2=new_n622 X=new_n623
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n609 A1=new_n346 A2=new_n614 C1=new_n623 X=new_n624
+.gate sky130_fd_sc_hd__and3_2                           A=a[33] B=new_n331 C=new_n332 X=new_n625
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n279 SLEEP=shift[0] X=new_n626
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n280 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n626 Y=new_n627
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[30] A2=shift[0] A3=shift[1] B1=new_n625 C1=new_n627 X=new_n628
+.gate sky130_fd_sc_hd__and3_2                           A=a[29] B=new_n331 C=new_n332 X=new_n629
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n277 SLEEP=shift[0] X=new_n630
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n278 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n630 Y=new_n631
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[26] A2=shift[0] A3=shift[1] B1=new_n629 C1=new_n631 X=new_n632
+.gate sky130_fd_sc_hd__and3_2                           A=a[21] B=new_n331 C=new_n332 X=new_n633
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n273 SLEEP=shift[0] X=new_n634
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n274 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n634 Y=new_n635
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[18] A2=shift[0] A3=shift[1] B1=new_n633 C1=new_n635 X=new_n636
+.gate sky130_fd_sc_hd__and3_2                           A=a[25] B=new_n331 C=new_n332 X=new_n637
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n275 SLEEP=shift[0] X=new_n638
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n276 A2=new_n331 A3=shift[1] B1=new_n332 B2=new_n638 Y=new_n639
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[22] A2=shift[0] A3=shift[1] B1=new_n637 C1=new_n639 X=new_n640
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n636 B1=new_n355 B2=new_n640 X=new_n641
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n628 A1=new_n346 A2=new_n632 C1=new_n641 X=new_n642
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n624 B1=new_n377 B2=new_n642 X=new_n643
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n587 A1=new_n358 A2=new_n605 C1=new_n643 X=new_n644
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n644 A2=new_n569 Y=new_n645
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n645 Y=result[1]
+.gate sky130_fd_sc_hd__and3_2                           A=a[81] B=shift[0] C=new_n332 X=new_n647
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n307 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n338 Y=new_n648
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[82] A2=new_n331 A3=new_n332 B1=new_n647 C1=new_n648 X=new_n649
+.gate sky130_fd_sc_hd__and3_2                           A=a[77] B=shift[0] C=new_n332 X=new_n650
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n305 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n343 Y=new_n651
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[78] A2=new_n331 A3=new_n332 B1=new_n650 C1=new_n651 X=new_n652
+.gate sky130_fd_sc_hd__and3_2                           A=a[69] B=shift[0] C=new_n332 X=new_n653
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n301 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n348 Y=new_n654
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[70] A2=new_n331 A3=new_n332 B1=new_n653 C1=new_n654 X=new_n655
+.gate sky130_fd_sc_hd__and3_2                           A=a[73] B=shift[0] C=new_n332 X=new_n656
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n303 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n352 Y=new_n657
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[74] A2=new_n331 A3=new_n332 B1=new_n656 C1=new_n657 X=new_n658
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n655 B1=new_n355 B2=new_n658 X=new_n659
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n649 A1=new_n346 A2=new_n652 C1=new_n659 X=new_n660
+.gate sky130_fd_sc_hd__and3_2                           A=a[97] B=shift[0] C=new_n332 X=new_n661
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n315 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n360 Y=new_n662
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[98] A2=new_n331 A3=new_n332 B1=new_n661 C1=new_n662 X=new_n663
+.gate sky130_fd_sc_hd__and3_2                           A=a[93] B=shift[0] C=new_n332 X=new_n664
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n313 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n364 Y=new_n665
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[94] A2=new_n331 A3=new_n332 B1=new_n664 C1=new_n665 X=new_n666
+.gate sky130_fd_sc_hd__and3_2                           A=a[85] B=shift[0] C=new_n332 X=new_n667
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n309 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n368 Y=new_n668
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[86] A2=new_n331 A3=new_n332 B1=new_n667 C1=new_n668 X=new_n669
+.gate sky130_fd_sc_hd__and3_2                           A=a[89] B=shift[0] C=new_n332 X=new_n670
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n311 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n372 Y=new_n671
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[90] A2=new_n331 A3=new_n332 B1=new_n670 C1=new_n671 X=new_n672
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n669 B1=new_n355 B2=new_n672 X=new_n673
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n663 A1=new_n346 A2=new_n666 C1=new_n673 X=new_n674
+.gate sky130_fd_sc_hd__and3_2                           A=a[1] B=shift[0] C=new_n332 X=new_n675
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n264 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n379 Y=new_n676
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[2] A2=new_n331 A3=new_n332 B1=new_n675 C1=new_n676 X=new_n677
+.gate sky130_fd_sc_hd__and3_2                           A=a[125] B=shift[0] C=new_n332 X=new_n678
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n329 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n383 Y=new_n679
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[126] A2=new_n331 A3=new_n332 B1=new_n678 C1=new_n679 X=new_n680
+.gate sky130_fd_sc_hd__and3_2                           A=a[117] B=shift[0] C=new_n332 X=new_n681
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n325 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n387 Y=new_n682
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[118] A2=new_n331 A3=new_n332 B1=new_n681 C1=new_n682 X=new_n683
+.gate sky130_fd_sc_hd__and3_2                           A=a[121] B=shift[0] C=new_n332 X=new_n684
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n327 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n391 Y=new_n685
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[122] A2=new_n331 A3=new_n332 B1=new_n684 C1=new_n685 X=new_n686
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n683 B1=new_n355 B2=new_n686 X=new_n687
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n677 A1=new_n346 A2=new_n680 C1=new_n687 X=new_n688
+.gate sky130_fd_sc_hd__and3_2                           A=a[113] B=shift[0] C=new_n332 X=new_n689
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n323 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n398 Y=new_n690
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[114] A2=new_n331 A3=new_n332 B1=new_n689 C1=new_n690 X=new_n691
+.gate sky130_fd_sc_hd__and3_2                           A=a[109] B=shift[0] C=new_n332 X=new_n692
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n321 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n402 Y=new_n693
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[110] A2=new_n331 A3=new_n332 B1=new_n692 C1=new_n693 X=new_n694
+.gate sky130_fd_sc_hd__and3_2                           A=a[101] B=shift[0] C=new_n332 X=new_n695
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n317 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n406 Y=new_n696
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[102] A2=new_n331 A3=new_n332 B1=new_n695 C1=new_n696 X=new_n697
+.gate sky130_fd_sc_hd__and3_2                           A=a[105] B=shift[0] C=new_n332 X=new_n698
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n319 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n410 Y=new_n699
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[106] A2=new_n331 A3=new_n332 B1=new_n698 C1=new_n699 X=new_n700
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n697 B1=new_n355 B2=new_n700 X=new_n701
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n691 A1=new_n346 A2=new_n694 C1=new_n701 X=new_n702
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n688 B1=new_n415 B2=new_n702 X=new_n703
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n660 A1=new_n377 A2=new_n674 C1=new_n703 X=new_n704
+.gate sky130_fd_sc_hd__and3_2                           A=a[65] B=shift[0] C=new_n332 X=new_n705
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n299 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n455 Y=new_n706
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[66] A2=new_n331 A3=new_n332 B1=new_n705 C1=new_n706 X=new_n707
+.gate sky130_fd_sc_hd__and3_2                           A=a[61] B=shift[0] C=new_n332 X=new_n708
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n297 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n459 Y=new_n709
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[62] A2=new_n331 A3=new_n332 B1=new_n708 C1=new_n709 X=new_n710
+.gate sky130_fd_sc_hd__and3_2                           A=a[53] B=shift[0] C=new_n332 X=new_n711
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n293 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n463 Y=new_n712
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[54] A2=new_n331 A3=new_n332 B1=new_n711 C1=new_n712 X=new_n713
+.gate sky130_fd_sc_hd__and3_2                           A=a[57] B=shift[0] C=new_n332 X=new_n714
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n295 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n467 Y=new_n715
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[58] A2=new_n331 A3=new_n332 B1=new_n714 C1=new_n715 X=new_n716
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n713 B1=new_n355 B2=new_n716 X=new_n717
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n707 A1=new_n346 A2=new_n710 C1=new_n717 X=new_n718
+.gate sky130_fd_sc_hd__and3_2                           A=a[17] B=shift[0] C=new_n332 X=new_n719
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n272 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n419 Y=new_n720
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[18] A2=new_n331 A3=new_n332 B1=new_n719 C1=new_n720 X=new_n721
+.gate sky130_fd_sc_hd__and3_2                           A=a[13] B=shift[0] C=new_n332 X=new_n722
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n270 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n423 Y=new_n723
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[14] A2=new_n331 A3=new_n332 B1=new_n722 C1=new_n723 X=new_n724
+.gate sky130_fd_sc_hd__and3_2                           A=a[5] B=shift[0] C=new_n332 X=new_n725
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n266 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n427 Y=new_n726
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[6] A2=new_n331 A3=new_n332 B1=new_n725 C1=new_n726 X=new_n727
+.gate sky130_fd_sc_hd__and3_2                           A=a[9] B=shift[0] C=new_n332 X=new_n728
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n268 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n431 Y=new_n729
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[10] A2=new_n331 A3=new_n332 B1=new_n728 C1=new_n729 X=new_n730
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n727 B1=new_n355 B2=new_n730 X=new_n731
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n721 A1=new_n346 A2=new_n724 C1=new_n731 X=new_n732
+.gate sky130_fd_sc_hd__and3_2                           A=a[49] B=shift[0] C=new_n332 X=new_n733
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n291 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n474 Y=new_n734
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[50] A2=new_n331 A3=new_n332 B1=new_n733 C1=new_n734 X=new_n735
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n287 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n478 Y=new_n736
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n289 A2=shift[0] A3=shift[1] B1=shift[1] B2=new_n472 Y=new_n737
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n736 SLEEP=new_n737 X=new_n738
+.gate sky130_fd_sc_hd__lpflow_isobufsrc_1               A=new_n332 SLEEP=new_n487 X=new_n739
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n282 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n482 Y=new_n740
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[37] A2=shift[0] A3=new_n332 B1=new_n739 C1=new_n740 X=new_n741
+.gate sky130_fd_sc_hd__and3_2                           A=a[41] B=shift[0] C=new_n332 X=new_n742
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n284 A2=new_n331 A3=new_n332 B1=new_n332 B2=new_n485 Y=new_n743
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[42] A2=new_n331 A3=new_n332 B1=new_n742 C1=new_n743 X=new_n744
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n741 B1=new_n355 B2=new_n744 X=new_n745
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n735 A1=new_n346 A2=new_n738 C1=new_n745 X=new_n746
+.gate sky130_fd_sc_hd__and3_2                           A=a[33] B=shift[0] C=new_n332 X=new_n747
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n280 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n437 Y=new_n748
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[34] A2=new_n331 A3=new_n332 B1=new_n747 C1=new_n748 X=new_n749
+.gate sky130_fd_sc_hd__and3_2                           A=a[29] B=shift[0] C=new_n332 X=new_n750
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n278 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n441 Y=new_n751
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[30] A2=new_n331 A3=new_n332 B1=new_n750 C1=new_n751 X=new_n752
+.gate sky130_fd_sc_hd__and3_2                           A=a[21] B=shift[0] C=new_n332 X=new_n753
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n274 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n445 Y=new_n754
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[22] A2=new_n331 A3=new_n332 B1=new_n753 C1=new_n754 X=new_n755
+.gate sky130_fd_sc_hd__and3_2                           A=a[25] B=shift[0] C=new_n332 X=new_n756
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n276 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n449 Y=new_n757
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[26] A2=new_n331 A3=new_n332 B1=new_n756 C1=new_n757 X=new_n758
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n755 B1=new_n355 B2=new_n758 X=new_n759
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n749 A1=new_n346 A2=new_n752 C1=new_n759 X=new_n760
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n746 B1=new_n377 B2=new_n760 X=new_n761
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n718 A1=new_n358 A2=new_n732 C1=new_n761 X=new_n762
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n762 A2=new_n704 Y=new_n763
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n763 Y=result[2]
+.gate sky130_fd_sc_hd__and3_2                           A=a[113] B=new_n331 C=shift[1] X=new_n765
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n323 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n541 Y=new_n766
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[114] A2=shift[0] A3=new_n332 B1=new_n765 C1=new_n766 X=new_n767
+.gate sky130_fd_sc_hd__and3_2                           A=a[109] B=new_n331 C=shift[1] X=new_n768
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n321 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n551 Y=new_n769
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[110] A2=shift[0] A3=new_n332 B1=new_n768 C1=new_n769 X=new_n770
+.gate sky130_fd_sc_hd__and3_2                           A=a[101] B=new_n331 C=shift[1] X=new_n771
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n317 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n563 Y=new_n772
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[102] A2=shift[0] A3=new_n332 B1=new_n771 C1=new_n772 X=new_n773
+.gate sky130_fd_sc_hd__and3_2                           A=a[105] B=new_n331 C=shift[1] X=new_n774
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n319 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n555 Y=new_n775
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[106] A2=shift[0] A3=new_n332 B1=new_n774 C1=new_n775 X=new_n776
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n773 B1=new_n355 B2=new_n776 X=new_n777
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n767 A1=new_n346 A2=new_n770 C1=new_n777 X=new_n778
+.gate sky130_fd_sc_hd__and3_2                           A=a[97] B=new_n331 C=shift[1] X=new_n779
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n315 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n559 Y=new_n780
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[98] A2=shift[0] A3=new_n332 B1=new_n779 C1=new_n780 X=new_n781
+.gate sky130_fd_sc_hd__and3_2                           A=a[93] B=new_n331 C=shift[1] X=new_n782
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n313 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n515 Y=new_n783
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[94] A2=shift[0] A3=new_n332 B1=new_n782 C1=new_n783 X=new_n784
+.gate sky130_fd_sc_hd__and3_2                           A=a[85] B=new_n331 C=shift[1] X=new_n785
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n309 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n527 Y=new_n786
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[86] A2=shift[0] A3=new_n332 B1=new_n785 C1=new_n786 X=new_n787
+.gate sky130_fd_sc_hd__and3_2                           A=a[89] B=new_n331 C=shift[1] X=new_n788
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n311 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n519 Y=new_n789
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[90] A2=shift[0] A3=new_n332 B1=new_n788 C1=new_n789 X=new_n790
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n787 B1=new_n355 B2=new_n790 X=new_n791
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n781 A1=new_n346 A2=new_n784 C1=new_n791 X=new_n792
+.gate sky130_fd_sc_hd__and3_2                           A=a[1] B=new_n331 C=shift[1] X=new_n793
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n264 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n597 Y=new_n794
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[2] A2=shift[0] A3=new_n332 B1=new_n793 C1=new_n794 X=new_n795
+.gate sky130_fd_sc_hd__and3_2                           A=a[125] B=new_n331 C=shift[1] X=new_n796
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n329 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n533 Y=new_n797
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[126] A2=shift[0] A3=new_n332 B1=new_n796 C1=new_n797 X=new_n798
+.gate sky130_fd_sc_hd__and3_2                           A=a[117] B=new_n331 C=shift[1] X=new_n799
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n325 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n545 Y=new_n800
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[118] A2=shift[0] A3=new_n332 B1=new_n799 C1=new_n800 X=new_n801
+.gate sky130_fd_sc_hd__and3_2                           A=a[121] B=new_n331 C=shift[1] X=new_n802
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n327 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n537 Y=new_n803
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[122] A2=shift[0] A3=new_n332 B1=new_n802 C1=new_n803 X=new_n804
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n801 B1=new_n355 B2=new_n804 X=new_n805
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n795 A1=new_n346 A2=new_n798 C1=new_n805 X=new_n806
+.gate sky130_fd_sc_hd__and3_2                           A=a[81] B=new_n331 C=shift[1] X=new_n807
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n307 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n523 Y=new_n808
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[82] A2=shift[0] A3=new_n332 B1=new_n807 C1=new_n808 X=new_n809
+.gate sky130_fd_sc_hd__and3_2                           A=a[77] B=new_n331 C=shift[1] X=new_n810
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n305 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n497 Y=new_n811
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[78] A2=shift[0] A3=new_n332 B1=new_n810 C1=new_n811 X=new_n812
+.gate sky130_fd_sc_hd__and3_2                           A=a[69] B=new_n331 C=shift[1] X=new_n813
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n301 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n509 Y=new_n814
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[70] A2=shift[0] A3=new_n332 B1=new_n813 C1=new_n814 X=new_n815
+.gate sky130_fd_sc_hd__and3_2                           A=a[73] B=new_n331 C=shift[1] X=new_n816
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n303 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n501 Y=new_n817
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[74] A2=shift[0] A3=new_n332 B1=new_n816 C1=new_n817 X=new_n818
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n815 B1=new_n355 B2=new_n818 X=new_n819
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n809 A1=new_n346 A2=new_n812 C1=new_n819 X=new_n820
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n806 B1=new_n358 B2=new_n820 X=new_n821
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n778 A1=new_n377 A2=new_n792 C1=new_n821 X=new_n822
+.gate sky130_fd_sc_hd__and3_2                           A=a[65] B=new_n331 C=shift[1] X=new_n823
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n299 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n505 Y=new_n824
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[66] A2=shift[0] A3=new_n332 B1=new_n823 C1=new_n824 X=new_n825
+.gate sky130_fd_sc_hd__and3_2                           A=a[61] B=new_n331 C=shift[1] X=new_n826
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n297 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n571 Y=new_n827
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[62] A2=shift[0] A3=new_n332 B1=new_n826 C1=new_n827 X=new_n828
+.gate sky130_fd_sc_hd__and3_2                           A=a[53] B=new_n331 C=shift[1] X=new_n829
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n293 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n583 Y=new_n830
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[54] A2=shift[0] A3=new_n332 B1=new_n829 C1=new_n830 X=new_n831
+.gate sky130_fd_sc_hd__and3_2                           A=a[57] B=new_n331 C=shift[1] X=new_n832
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n295 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n575 Y=new_n833
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[58] A2=shift[0] A3=new_n332 B1=new_n832 C1=new_n833 X=new_n834
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n831 B1=new_n355 B2=new_n834 X=new_n835
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n825 A1=new_n346 A2=new_n828 C1=new_n835 X=new_n836
+.gate sky130_fd_sc_hd__and3_2                           A=a[49] B=new_n331 C=shift[1] X=new_n837
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n291 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n579 Y=new_n838
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[50] A2=shift[0] A3=new_n332 B1=new_n837 C1=new_n838 X=new_n839
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n288 A2=shift[0] A3=new_n332 B1=new_n332 B2=new_n612 Y=new_n840
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n289 A2=new_n331 A3=shift[1] B1=shift[1] B2=new_n607 Y=new_n841
+.gate sky130_fd_sc_hd__lpflow_inputiso1p_1              A=new_n840 SLEEP=new_n841 X=new_n842
+.gate sky130_fd_sc_hd__and3_2                           A=a[38] B=shift[0] C=new_n332 X=new_n843
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n282 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n620 Y=new_n844
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[37] A2=new_n331 A3=shift[1] B1=new_n843 C1=new_n844 X=new_n845
+.gate sky130_fd_sc_hd__and3_2                           A=a[41] B=new_n331 C=shift[1] X=new_n846
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n285 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n610 Y=new_n847
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[42] A2=shift[0] A3=new_n332 B1=new_n846 C1=new_n847 X=new_n848
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n845 B1=new_n355 B2=new_n848 X=new_n849
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n839 A1=new_n346 A2=new_n842 C1=new_n849 X=new_n850
+.gate sky130_fd_sc_hd__and3_2                           A=a[17] B=new_n331 C=shift[1] X=new_n851
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n272 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n634 Y=new_n852
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[18] A2=shift[0] A3=new_n332 B1=new_n851 C1=new_n852 X=new_n853
+.gate sky130_fd_sc_hd__and3_2                           A=a[13] B=new_n331 C=shift[1] X=new_n854
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n270 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n589 Y=new_n855
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[14] A2=shift[0] A3=new_n332 B1=new_n854 C1=new_n855 X=new_n856
+.gate sky130_fd_sc_hd__and3_2                           A=a[5] B=new_n331 C=shift[1] X=new_n857
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n266 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n601 Y=new_n858
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[6] A2=shift[0] A3=new_n332 B1=new_n857 C1=new_n858 X=new_n859
+.gate sky130_fd_sc_hd__and3_2                           A=a[9] B=new_n331 C=shift[1] X=new_n860
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n268 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n593 Y=new_n861
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[10] A2=shift[0] A3=new_n332 B1=new_n860 C1=new_n861 X=new_n862
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n859 B1=new_n355 B2=new_n862 X=new_n863
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n853 A1=new_n346 A2=new_n856 C1=new_n863 X=new_n864
+.gate sky130_fd_sc_hd__and3_2                           A=a[33] B=new_n331 C=shift[1] X=new_n865
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n280 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n616 Y=new_n866
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[34] A2=shift[0] A3=new_n332 B1=new_n865 C1=new_n866 X=new_n867
+.gate sky130_fd_sc_hd__and3_2                           A=a[29] B=new_n331 C=shift[1] X=new_n868
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n278 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n626 Y=new_n869
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[30] A2=shift[0] A3=new_n332 B1=new_n868 C1=new_n869 X=new_n870
+.gate sky130_fd_sc_hd__and3_2                           A=a[21] B=new_n331 C=shift[1] X=new_n871
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n274 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n638 Y=new_n872
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[22] A2=shift[0] A3=new_n332 B1=new_n871 C1=new_n872 X=new_n873
+.gate sky130_fd_sc_hd__and3_2                           A=a[25] B=new_n331 C=shift[1] X=new_n874
+.gate sky130_fd_sc_hd__o32ai_1                          A1=new_n276 A2=new_n331 A3=new_n332 B1=shift[1] B2=new_n630 Y=new_n875
+.gate sky130_fd_sc_hd__a311o_1                          A1=a[26] A2=shift[0] A3=new_n332 B1=new_n874 C1=new_n875 X=new_n876
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n873 B1=new_n355 B2=new_n876 X=new_n877
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n867 A1=new_n346 A2=new_n870 C1=new_n877 X=new_n878
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n864 B1=new_n377 B2=new_n878 X=new_n879
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n836 A1=new_n415 A2=new_n850 C1=new_n879 X=new_n880
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n880 A2=new_n822 Y=new_n881
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n881 Y=result[3]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n354 B1=new_n345 B2=new_n355 X=new_n883
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n370 A1=new_n340 A2=new_n346 C1=new_n883 X=new_n884
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n374 B1=new_n355 B2=new_n366 X=new_n885
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n408 A1=new_n346 A2=new_n362 C1=new_n885 X=new_n886
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n393 B1=new_n355 B2=new_n385 X=new_n887
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n429 A1=new_n346 A2=new_n381 C1=new_n887 X=new_n888
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n412 B1=new_n355 B2=new_n404 X=new_n889
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n389 A1=new_n346 A2=new_n400 C1=new_n889 X=new_n890
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n888 B1=new_n415 B2=new_n890 X=new_n891
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n884 A1=new_n377 A2=new_n886 C1=new_n891 X=new_n892
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n489 B1=new_n355 B2=new_n480 X=new_n893
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n465 A1=new_n346 A2=new_n476 C1=new_n893 X=new_n894
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n469 B1=new_n355 B2=new_n461 X=new_n895
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n350 A1=new_n346 A2=new_n457 C1=new_n895 X=new_n896
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n451 B1=new_n355 B2=new_n443 X=new_n897
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n484 A1=new_n346 A2=new_n439 C1=new_n897 X=new_n898
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n433 B1=new_n355 B2=new_n425 X=new_n899
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n447 A1=new_n346 A2=new_n421 C1=new_n899 X=new_n900
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n900 B1=new_n377 B2=new_n898 X=new_n901
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n894 A1=new_n396 A2=new_n896 C1=new_n901 X=new_n902
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n902 A2=new_n892 Y=new_n903
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n903 Y=result[4]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n511 B1=new_n355 B2=new_n503 X=new_n905
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n525 A1=new_n346 A2=new_n499 C1=new_n905 X=new_n906
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n529 B1=new_n355 B2=new_n521 X=new_n907
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n561 A1=new_n346 A2=new_n517 C1=new_n907 X=new_n908
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n547 B1=new_n355 B2=new_n539 X=new_n909
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n599 A1=new_n346 A2=new_n535 C1=new_n909 X=new_n910
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n565 B1=new_n355 B2=new_n557 X=new_n911
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n543 A1=new_n346 A2=new_n553 C1=new_n911 X=new_n912
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n910 B1=new_n415 B2=new_n912 X=new_n913
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n906 A1=new_n377 A2=new_n908 C1=new_n913 X=new_n914
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n622 B1=new_n355 B2=new_n614 X=new_n915
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n581 A1=new_n346 A2=new_n609 C1=new_n915 X=new_n916
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n585 B1=new_n355 B2=new_n577 X=new_n917
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n507 A1=new_n346 A2=new_n573 C1=new_n917 X=new_n918
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n640 B1=new_n355 B2=new_n632 X=new_n919
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n618 A1=new_n346 A2=new_n628 C1=new_n919 X=new_n920
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n603 B1=new_n355 B2=new_n595 X=new_n921
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n636 A1=new_n346 A2=new_n591 C1=new_n921 X=new_n922
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n922 B1=new_n377 B2=new_n920 X=new_n923
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n916 A1=new_n396 A2=new_n918 C1=new_n923 X=new_n924
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n924 A2=new_n914 Y=new_n925
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n925 Y=result[5]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n658 B1=new_n355 B2=new_n652 X=new_n927
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n669 A1=new_n346 A2=new_n649 C1=new_n927 X=new_n928
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n672 B1=new_n355 B2=new_n666 X=new_n929
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n697 A1=new_n346 A2=new_n663 C1=new_n929 X=new_n930
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n686 B1=new_n355 B2=new_n680 X=new_n931
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n727 A1=new_n346 A2=new_n677 C1=new_n931 X=new_n932
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n700 B1=new_n355 B2=new_n694 X=new_n933
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n683 A1=new_n346 A2=new_n691 C1=new_n933 X=new_n934
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n932 B1=new_n415 B2=new_n934 X=new_n935
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n928 A1=new_n377 A2=new_n930 C1=new_n935 X=new_n936
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n744 B1=new_n355 B2=new_n738 X=new_n937
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n713 A1=new_n346 A2=new_n735 C1=new_n937 X=new_n938
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n716 B1=new_n355 B2=new_n710 X=new_n939
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n655 A1=new_n346 A2=new_n707 C1=new_n939 X=new_n940
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n758 B1=new_n355 B2=new_n752 X=new_n941
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n741 A1=new_n346 A2=new_n749 C1=new_n941 X=new_n942
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n730 B1=new_n355 B2=new_n724 X=new_n943
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n755 A1=new_n346 A2=new_n721 C1=new_n943 X=new_n944
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n944 B1=new_n377 B2=new_n942 X=new_n945
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n938 A1=new_n396 A2=new_n940 C1=new_n945 X=new_n946
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n946 A2=new_n936 Y=new_n947
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n947 Y=result[6]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n818 B1=new_n355 B2=new_n812 X=new_n949
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n787 A1=new_n346 A2=new_n809 C1=new_n949 X=new_n950
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n790 B1=new_n355 B2=new_n784 X=new_n951
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n773 A1=new_n346 A2=new_n781 C1=new_n951 X=new_n952
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n804 B1=new_n355 B2=new_n798 X=new_n953
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n859 A1=new_n346 A2=new_n795 C1=new_n953 X=new_n954
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n776 B1=new_n355 B2=new_n770 X=new_n955
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n801 A1=new_n346 A2=new_n767 C1=new_n955 X=new_n956
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n954 B1=new_n415 B2=new_n956 X=new_n957
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n950 A1=new_n377 A2=new_n952 C1=new_n957 X=new_n958
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n848 B1=new_n341 B2=new_n831 X=new_n959
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n346 B2=new_n839 A1=new_n355 A2=new_n842 C1=new_n959 X=new_n960
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n834 B1=new_n355 B2=new_n828 X=new_n961
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n815 A1=new_n346 A2=new_n825 C1=new_n961 X=new_n962
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n876 B1=new_n355 B2=new_n870 X=new_n963
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n845 A1=new_n346 A2=new_n867 C1=new_n963 X=new_n964
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n862 B1=new_n355 B2=new_n856 X=new_n965
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n873 A1=new_n346 A2=new_n853 C1=new_n965 X=new_n966
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n966 B1=new_n377 B2=new_n964 X=new_n967
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n960 A1=new_n396 A2=new_n962 C1=new_n967 X=new_n968
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n968 A2=new_n958 Y=new_n969
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n969 Y=result[7]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n345 B1=new_n340 B2=new_n355 X=new_n971
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n374 A1=new_n346 A2=new_n370 C1=new_n971 X=new_n972
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n366 B1=new_n355 B2=new_n362 X=new_n973
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n412 A1=new_n346 A2=new_n408 C1=new_n973 X=new_n974
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n385 B1=new_n355 B2=new_n381 X=new_n975
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n433 A1=new_n346 A2=new_n429 C1=new_n975 X=new_n976
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n404 B1=new_n355 B2=new_n400 X=new_n977
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n393 A1=new_n346 A2=new_n389 C1=new_n977 X=new_n978
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n976 B1=new_n415 B2=new_n978 X=new_n979
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n972 A1=new_n377 A2=new_n974 C1=new_n979 X=new_n980
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n480 B1=new_n355 B2=new_n476 X=new_n981
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n469 A1=new_n346 A2=new_n465 C1=new_n981 X=new_n982
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n461 B1=new_n355 B2=new_n457 X=new_n983
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n354 A1=new_n346 A2=new_n350 C1=new_n983 X=new_n984
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n443 B1=new_n355 B2=new_n439 X=new_n985
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n489 A1=new_n346 A2=new_n484 C1=new_n985 X=new_n986
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n425 B1=new_n355 B2=new_n421 X=new_n987
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n451 A1=new_n346 A2=new_n447 C1=new_n987 X=new_n988
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n988 B1=new_n377 B2=new_n986 X=new_n989
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n982 A1=new_n396 A2=new_n984 C1=new_n989 X=new_n990
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n990 A2=new_n980 Y=new_n991
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n991 Y=result[8]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n503 B1=new_n355 B2=new_n499 X=new_n993
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n529 A1=new_n346 A2=new_n525 C1=new_n993 X=new_n994
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n521 B1=new_n355 B2=new_n517 X=new_n995
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n565 A1=new_n346 A2=new_n561 C1=new_n995 X=new_n996
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n539 B1=new_n355 B2=new_n535 X=new_n997
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n603 A1=new_n346 A2=new_n599 C1=new_n997 X=new_n998
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n557 B1=new_n355 B2=new_n553 X=new_n999
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n547 A1=new_n346 A2=new_n543 C1=new_n999 X=new_n1000
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n998 B1=new_n415 B2=new_n1000 X=new_n1001
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n994 A1=new_n377 A2=new_n996 C1=new_n1001 X=new_n1002
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n614 B1=new_n355 B2=new_n609 X=new_n1003
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n585 A1=new_n346 A2=new_n581 C1=new_n1003 X=new_n1004
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n577 B1=new_n355 B2=new_n573 X=new_n1005
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n511 A1=new_n346 A2=new_n507 C1=new_n1005 X=new_n1006
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n632 B1=new_n355 B2=new_n628 X=new_n1007
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n622 A1=new_n346 A2=new_n618 C1=new_n1007 X=new_n1008
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n595 B1=new_n355 B2=new_n591 X=new_n1009
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n640 A1=new_n346 A2=new_n636 C1=new_n1009 X=new_n1010
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1010 B1=new_n377 B2=new_n1008 X=new_n1011
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1004 A1=new_n396 A2=new_n1006 C1=new_n1011 X=new_n1012
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1012 A2=new_n1002 Y=new_n1013
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1013 Y=result[9]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n652 B1=new_n355 B2=new_n649 X=new_n1015
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n672 A1=new_n346 A2=new_n669 C1=new_n1015 X=new_n1016
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n666 B1=new_n355 B2=new_n663 X=new_n1017
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n700 A1=new_n346 A2=new_n697 C1=new_n1017 X=new_n1018
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n680 B1=new_n355 B2=new_n677 X=new_n1019
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n730 A1=new_n346 A2=new_n727 C1=new_n1019 X=new_n1020
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n694 B1=new_n355 B2=new_n691 X=new_n1021
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n686 A1=new_n346 A2=new_n683 C1=new_n1021 X=new_n1022
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1020 B1=new_n415 B2=new_n1022 X=new_n1023
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1016 A1=new_n377 A2=new_n1018 C1=new_n1023 X=new_n1024
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n738 B1=new_n355 B2=new_n735 X=new_n1025
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n716 A1=new_n346 A2=new_n713 C1=new_n1025 X=new_n1026
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n710 B1=new_n355 B2=new_n707 X=new_n1027
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n658 A1=new_n346 A2=new_n655 C1=new_n1027 X=new_n1028
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n752 B1=new_n355 B2=new_n749 X=new_n1029
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n744 A1=new_n346 A2=new_n741 C1=new_n1029 X=new_n1030
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n724 B1=new_n355 B2=new_n721 X=new_n1031
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n758 A1=new_n346 A2=new_n755 C1=new_n1031 X=new_n1032
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1032 B1=new_n377 B2=new_n1030 X=new_n1033
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1026 A1=new_n396 A2=new_n1028 C1=new_n1033 X=new_n1034
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1034 A2=new_n1024 Y=new_n1035
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1035 Y=result[10]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n812 B1=new_n355 B2=new_n809 X=new_n1037
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n790 A1=new_n346 A2=new_n787 C1=new_n1037 X=new_n1038
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n784 B1=new_n355 B2=new_n781 X=new_n1039
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n776 A1=new_n346 A2=new_n773 C1=new_n1039 X=new_n1040
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n798 B1=new_n355 B2=new_n795 X=new_n1041
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n862 A1=new_n346 A2=new_n859 C1=new_n1041 X=new_n1042
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n770 B1=new_n355 B2=new_n767 X=new_n1043
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n804 A1=new_n346 A2=new_n801 C1=new_n1043 X=new_n1044
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1042 B1=new_n415 B2=new_n1044 X=new_n1045
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1038 A1=new_n377 A2=new_n1040 C1=new_n1045 X=new_n1046
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n842 B1=new_n346 B2=new_n831 X=new_n1047
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n834 A1=new_n355 A2=new_n839 C1=new_n1047 X=new_n1048
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n828 B1=new_n355 B2=new_n825 X=new_n1049
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n818 A1=new_n346 A2=new_n815 C1=new_n1049 X=new_n1050
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n870 B1=new_n355 B2=new_n867 X=new_n1051
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n848 A1=new_n346 A2=new_n845 C1=new_n1051 X=new_n1052
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n856 B1=new_n355 B2=new_n853 X=new_n1053
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n876 A1=new_n346 A2=new_n873 C1=new_n1053 X=new_n1054
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1054 B1=new_n377 B2=new_n1052 X=new_n1055
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1048 A1=new_n396 A2=new_n1050 C1=new_n1055 X=new_n1056
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1056 A2=new_n1046 Y=new_n1057
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1057 Y=result[11]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n340 B1=new_n355 B2=new_n370 X=new_n1059
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n366 A1=new_n346 A2=new_n374 C1=new_n1059 X=new_n1060
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n362 B1=new_n355 B2=new_n408 X=new_n1061
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n404 A1=new_n346 A2=new_n412 C1=new_n1061 X=new_n1062
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n381 B1=new_n355 B2=new_n429 X=new_n1063
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n425 A1=new_n346 A2=new_n433 C1=new_n1063 X=new_n1064
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n400 B1=new_n355 B2=new_n389 X=new_n1065
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n385 A1=new_n346 A2=new_n393 C1=new_n1065 X=new_n1066
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1064 B1=new_n415 B2=new_n1066 X=new_n1067
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1060 A1=new_n377 A2=new_n1062 C1=new_n1067 X=new_n1068
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n476 B1=new_n355 B2=new_n465 X=new_n1069
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n461 A1=new_n346 A2=new_n469 C1=new_n1069 X=new_n1070
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n457 B1=new_n350 B2=new_n355 X=new_n1071
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n345 A1=new_n346 A2=new_n354 C1=new_n1071 X=new_n1072
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n439 B1=new_n355 B2=new_n484 X=new_n1073
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n480 A1=new_n346 A2=new_n489 C1=new_n1073 X=new_n1074
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n421 B1=new_n355 B2=new_n447 X=new_n1075
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n443 A1=new_n346 A2=new_n451 C1=new_n1075 X=new_n1076
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1076 B1=new_n377 B2=new_n1074 X=new_n1077
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1070 A1=new_n396 A2=new_n1072 C1=new_n1077 X=new_n1078
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1078 A2=new_n1068 Y=new_n1079
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1079 Y=result[12]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n499 B1=new_n355 B2=new_n525 X=new_n1081
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n521 A1=new_n346 A2=new_n529 C1=new_n1081 X=new_n1082
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n517 B1=new_n355 B2=new_n561 X=new_n1083
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n557 A1=new_n346 A2=new_n565 C1=new_n1083 X=new_n1084
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n535 B1=new_n355 B2=new_n599 X=new_n1085
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n595 A1=new_n346 A2=new_n603 C1=new_n1085 X=new_n1086
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n553 B1=new_n355 B2=new_n543 X=new_n1087
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n539 A1=new_n346 A2=new_n547 C1=new_n1087 X=new_n1088
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1086 B1=new_n415 B2=new_n1088 X=new_n1089
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1082 A1=new_n377 A2=new_n1084 C1=new_n1089 X=new_n1090
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n609 B1=new_n355 B2=new_n581 X=new_n1091
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n577 A1=new_n346 A2=new_n585 C1=new_n1091 X=new_n1092
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n573 B1=new_n355 B2=new_n507 X=new_n1093
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n503 A1=new_n346 A2=new_n511 C1=new_n1093 X=new_n1094
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n628 B1=new_n355 B2=new_n618 X=new_n1095
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n614 A1=new_n346 A2=new_n622 C1=new_n1095 X=new_n1096
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n591 B1=new_n355 B2=new_n636 X=new_n1097
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n632 A1=new_n346 A2=new_n640 C1=new_n1097 X=new_n1098
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1098 B1=new_n377 B2=new_n1096 X=new_n1099
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1092 A1=new_n396 A2=new_n1094 C1=new_n1099 X=new_n1100
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1100 A2=new_n1090 Y=new_n1101
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1101 Y=result[13]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n649 B1=new_n355 B2=new_n669 X=new_n1103
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n666 A1=new_n346 A2=new_n672 C1=new_n1103 X=new_n1104
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n663 B1=new_n355 B2=new_n697 X=new_n1105
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n694 A1=new_n346 A2=new_n700 C1=new_n1105 X=new_n1106
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n677 B1=new_n355 B2=new_n727 X=new_n1107
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n724 A1=new_n346 A2=new_n730 C1=new_n1107 X=new_n1108
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n691 B1=new_n355 B2=new_n683 X=new_n1109
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n680 A1=new_n346 A2=new_n686 C1=new_n1109 X=new_n1110
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1108 B1=new_n415 B2=new_n1110 X=new_n1111
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1104 A1=new_n377 A2=new_n1106 C1=new_n1111 X=new_n1112
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n735 B1=new_n355 B2=new_n713 X=new_n1113
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n710 A1=new_n346 A2=new_n716 C1=new_n1113 X=new_n1114
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n707 B1=new_n355 B2=new_n655 X=new_n1115
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n652 A1=new_n346 A2=new_n658 C1=new_n1115 X=new_n1116
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n749 B1=new_n355 B2=new_n741 X=new_n1117
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n738 A1=new_n346 A2=new_n744 C1=new_n1117 X=new_n1118
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n721 B1=new_n355 B2=new_n755 X=new_n1119
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n752 A1=new_n346 A2=new_n758 C1=new_n1119 X=new_n1120
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1120 B1=new_n377 B2=new_n1118 X=new_n1121
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1114 A1=new_n396 A2=new_n1116 C1=new_n1121 X=new_n1122
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1122 A2=new_n1112 Y=new_n1123
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1123 Y=result[14]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n809 B1=new_n355 B2=new_n787 X=new_n1125
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n784 A1=new_n346 A2=new_n790 C1=new_n1125 X=new_n1126
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n781 B1=new_n355 B2=new_n773 X=new_n1127
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n770 A1=new_n346 A2=new_n776 C1=new_n1127 X=new_n1128
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n795 B1=new_n355 B2=new_n859 X=new_n1129
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n856 A1=new_n346 A2=new_n862 C1=new_n1129 X=new_n1130
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n767 B1=new_n355 B2=new_n801 X=new_n1131
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n798 A1=new_n346 A2=new_n804 C1=new_n1131 X=new_n1132
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1130 B1=new_n415 B2=new_n1132 X=new_n1133
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1126 A1=new_n377 A2=new_n1128 C1=new_n1133 X=new_n1134
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n839 B1=new_n355 B2=new_n831 X=new_n1135
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n828 A1=new_n346 A2=new_n834 C1=new_n1135 X=new_n1136
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n825 B1=new_n355 B2=new_n815 X=new_n1137
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n812 A1=new_n346 A2=new_n818 C1=new_n1137 X=new_n1138
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n867 B1=new_n355 B2=new_n845 X=new_n1139
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n842 A1=new_n346 A2=new_n848 C1=new_n1139 X=new_n1140
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[2] A2=shift[3] A3=new_n853 B1=new_n355 B2=new_n873 X=new_n1141
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n341 B2=new_n870 A1=new_n346 A2=new_n876 C1=new_n1141 X=new_n1142
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1142 B1=new_n377 B2=new_n1140 X=new_n1143
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1136 A1=new_n396 A2=new_n1138 C1=new_n1143 X=new_n1144
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1144 A2=new_n1134 Y=new_n1145
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1145 Y=result[15]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n435 B1=new_n395 B2=new_n415 X=new_n1147
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n376 A1=new_n377 A2=new_n414 C1=new_n1147 X=new_n1148
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n471 B1=new_n377 B2=new_n491 X=new_n1149
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n357 B2=new_n396 A1=new_n358 A2=new_n453 C1=new_n1149 X=new_n1150
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1150 A2=new_n1148 Y=new_n1151
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1151 Y=result[16]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n605 B1=new_n415 B2=new_n549 X=new_n1153
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n531 A1=new_n377 A2=new_n567 C1=new_n1153 X=new_n1154
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n642 B1=new_n377 B2=new_n624 X=new_n1155
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n587 A1=new_n396 A2=new_n513 C1=new_n1155 X=new_n1156
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1156 A2=new_n1154 Y=new_n1157
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1157 Y=result[17]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n732 B1=new_n415 B2=new_n688 X=new_n1159
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n674 A1=new_n377 A2=new_n702 C1=new_n1159 X=new_n1160
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n760 B1=new_n377 B2=new_n746 X=new_n1161
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n718 A1=new_n396 A2=new_n660 C1=new_n1161 X=new_n1162
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1162 A2=new_n1160 Y=new_n1163
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1163 Y=result[18]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n864 B1=new_n415 B2=new_n806 X=new_n1165
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n778 A1=new_n358 A2=new_n792 C1=new_n1165 X=new_n1166
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n878 B1=new_n377 B2=new_n850 X=new_n1167
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n836 A1=new_n396 A2=new_n820 C1=new_n1167 X=new_n1168
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1168 A2=new_n1166 Y=new_n1169
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1169 Y=result[19]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n900 B1=new_n415 B2=new_n888 X=new_n1171
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n886 A1=new_n377 A2=new_n890 C1=new_n1171 X=new_n1172
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n898 B1=new_n415 B2=new_n896 X=new_n1173
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n884 A1=new_n377 A2=new_n894 C1=new_n1173 X=new_n1174
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1174 A2=new_n1172 Y=new_n1175
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1175 Y=result[20]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n922 B1=new_n415 B2=new_n910 X=new_n1177
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n908 A1=new_n377 A2=new_n912 C1=new_n1177 X=new_n1178
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n920 B1=new_n415 B2=new_n918 X=new_n1179
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n906 A1=new_n377 A2=new_n916 C1=new_n1179 X=new_n1180
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1180 A2=new_n1178 Y=new_n1181
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1181 Y=result[21]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n944 B1=new_n415 B2=new_n932 X=new_n1183
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n930 A1=new_n377 A2=new_n934 C1=new_n1183 X=new_n1184
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n942 B1=new_n415 B2=new_n940 X=new_n1185
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n928 A1=new_n377 A2=new_n938 C1=new_n1185 X=new_n1186
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1186 A2=new_n1184 Y=new_n1187
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1187 Y=result[22]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n954 B1=new_n377 B2=new_n956 X=new_n1189
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n952 A1=new_n396 A2=new_n966 C1=new_n1189 X=new_n1190
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n950 B1=new_n358 B2=new_n964 X=new_n1191
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n960 A1=new_n415 A2=new_n962 C1=new_n1191 X=new_n1192
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1192 A2=new_n1190 Y=new_n1193
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1193 Y=result[23]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n976 B1=new_n377 B2=new_n978 X=new_n1195
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n974 A1=new_n396 A2=new_n988 C1=new_n1195 X=new_n1196
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n972 B1=new_n358 B2=new_n986 X=new_n1197
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n982 A1=new_n415 A2=new_n984 C1=new_n1197 X=new_n1198
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1198 A2=new_n1196 Y=new_n1199
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1199 Y=result[24]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n998 B1=new_n377 B2=new_n1000 X=new_n1201
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n996 A1=new_n396 A2=new_n1010 C1=new_n1201 X=new_n1202
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n994 B1=new_n358 B2=new_n1008 X=new_n1203
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n1004 A1=new_n415 A2=new_n1006 C1=new_n1203 X=new_n1204
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1204 A2=new_n1202 Y=new_n1205
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1205 Y=result[25]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1032 B1=new_n415 B2=new_n1020 X=new_n1207
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1018 A1=new_n377 A2=new_n1022 C1=new_n1207 X=new_n1208
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1016 B1=new_n358 B2=new_n1030 X=new_n1209
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n1026 A1=new_n415 A2=new_n1028 C1=new_n1209 X=new_n1210
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1210 A2=new_n1208 Y=new_n1211
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1211 Y=result[26]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1054 B1=new_n415 B2=new_n1042 X=new_n1213
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1040 A1=new_n377 A2=new_n1044 C1=new_n1213 X=new_n1214
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1038 B1=new_n358 B2=new_n1052 X=new_n1215
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n1048 A1=new_n415 A2=new_n1050 C1=new_n1215 X=new_n1216
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1216 A2=new_n1214 Y=new_n1217
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1217 Y=result[27]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1076 B1=new_n415 B2=new_n1064 X=new_n1219
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1062 A1=new_n377 A2=new_n1066 C1=new_n1219 X=new_n1220
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1060 B1=new_n358 B2=new_n1074 X=new_n1221
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n1070 A1=new_n415 A2=new_n1072 C1=new_n1221 X=new_n1222
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1222 A2=new_n1220 Y=new_n1223
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1223 Y=result[28]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1098 B1=new_n415 B2=new_n1086 X=new_n1225
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1084 A1=new_n377 A2=new_n1088 C1=new_n1225 X=new_n1226
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1082 B1=new_n358 B2=new_n1096 X=new_n1227
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n1092 A1=new_n415 A2=new_n1094 C1=new_n1227 X=new_n1228
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1228 A2=new_n1226 Y=new_n1229
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1229 Y=result[29]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1120 B1=new_n415 B2=new_n1108 X=new_n1231
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1106 A1=new_n377 A2=new_n1110 C1=new_n1231 X=new_n1232
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1104 B1=new_n358 B2=new_n1118 X=new_n1233
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n1114 A1=new_n415 A2=new_n1116 C1=new_n1233 X=new_n1234
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1234 A2=new_n1232 Y=new_n1235
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1235 Y=result[30]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1142 B1=new_n415 B2=new_n1130 X=new_n1237
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1128 A1=new_n377 A2=new_n1132 C1=new_n1237 X=new_n1238
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1126 B1=new_n358 B2=new_n1140 X=new_n1239
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n1136 A1=new_n415 A2=new_n1138 C1=new_n1239 X=new_n1240
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1240 A2=new_n1238 Y=new_n1241
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1241 Y=result[31]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n453 B1=new_n415 B2=new_n435 X=new_n1243
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n414 A1=new_n377 A2=new_n395 C1=new_n1243 X=new_n1244
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n491 B1=new_n377 B2=new_n471 X=new_n1245
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n357 B2=new_n415 A1=new_n376 A2=new_n396 C1=new_n1245 X=new_n1246
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1246 A2=new_n1244 Y=new_n1247
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1247 Y=result[32]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n642 B1=new_n415 B2=new_n605 X=new_n1249
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n567 A1=new_n377 A2=new_n549 C1=new_n1249 X=new_n1250
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n531 B1=new_n358 B2=new_n624 X=new_n1251
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n587 A1=new_n415 A2=new_n513 C1=new_n1251 X=new_n1252
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1252 A2=new_n1250 Y=new_n1253
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1253 Y=result[33]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n760 B1=new_n415 B2=new_n732 X=new_n1255
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n702 A1=new_n377 A2=new_n688 C1=new_n1255 X=new_n1256
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n674 B1=new_n358 B2=new_n746 X=new_n1257
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n718 A1=new_n415 A2=new_n660 C1=new_n1257 X=new_n1258
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1258 A2=new_n1256 Y=new_n1259
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1259 Y=result[34]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n864 B1=new_n377 B2=new_n806 X=new_n1261
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n778 A1=new_n396 A2=new_n878 C1=new_n1261 X=new_n1262
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n850 B1=new_n415 B2=new_n820 X=new_n1263
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n836 A1=new_n396 A2=new_n792 C1=new_n1263 X=new_n1264
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1264 A2=new_n1262 Y=new_n1265
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1265 Y=result[35]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n898 B1=new_n415 B2=new_n900 X=new_n1267
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n890 A1=new_n377 A2=new_n888 C1=new_n1267 X=new_n1268
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n894 B1=new_n377 B2=new_n896 X=new_n1269
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n884 A1=new_n396 A2=new_n886 C1=new_n1269 X=new_n1270
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1270 A2=new_n1268 Y=new_n1271
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1271 Y=result[36]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n920 B1=new_n415 B2=new_n922 X=new_n1273
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n912 A1=new_n377 A2=new_n910 C1=new_n1273 X=new_n1274
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n916 B1=new_n377 B2=new_n918 X=new_n1275
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n906 A1=new_n396 A2=new_n908 C1=new_n1275 X=new_n1276
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1276 A2=new_n1274 Y=new_n1277
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1277 Y=result[37]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n942 B1=new_n415 B2=new_n944 X=new_n1279
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n934 A1=new_n377 A2=new_n932 C1=new_n1279 X=new_n1280
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n938 B1=new_n377 B2=new_n940 X=new_n1281
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n928 A1=new_n396 A2=new_n930 C1=new_n1281 X=new_n1282
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1282 A2=new_n1280 Y=new_n1283
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1283 Y=result[38]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n956 B1=new_n377 B2=new_n954 X=new_n1285
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n966 A1=new_n396 A2=new_n964 C1=new_n1285 X=new_n1286
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n952 B1=new_n415 B2=new_n950 X=new_n1287
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n960 A1=new_n377 A2=new_n962 C1=new_n1287 X=new_n1288
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1288 A2=new_n1286 Y=new_n1289
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1289 Y=result[39]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n978 B1=new_n377 B2=new_n976 X=new_n1291
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n988 A1=new_n396 A2=new_n986 C1=new_n1291 X=new_n1292
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n974 B1=new_n415 B2=new_n972 X=new_n1293
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n982 A1=new_n377 A2=new_n984 C1=new_n1293 X=new_n1294
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1294 A2=new_n1292 Y=new_n1295
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1295 Y=result[40]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n1000 B1=new_n377 B2=new_n998 X=new_n1297
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n415 B2=new_n1010 A1=new_n396 A2=new_n1008 C1=new_n1297 X=new_n1298
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n996 B1=new_n415 B2=new_n994 X=new_n1299
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1004 A1=new_n377 A2=new_n1006 C1=new_n1299 X=new_n1300
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1300 A2=new_n1298 Y=new_n1301
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1301 Y=result[41]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1030 B1=new_n415 B2=new_n1032 X=new_n1303
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1022 A1=new_n377 A2=new_n1020 C1=new_n1303 X=new_n1304
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1018 B1=new_n415 B2=new_n1016 X=new_n1305
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1026 A1=new_n377 A2=new_n1028 C1=new_n1305 X=new_n1306
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1306 A2=new_n1304 Y=new_n1307
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1307 Y=result[42]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1052 B1=new_n415 B2=new_n1054 X=new_n1309
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1044 A1=new_n377 A2=new_n1042 C1=new_n1309 X=new_n1310
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1040 B1=new_n415 B2=new_n1038 X=new_n1311
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1048 A1=new_n377 A2=new_n1050 C1=new_n1311 X=new_n1312
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1312 A2=new_n1310 Y=new_n1313
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1313 Y=result[43]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1074 B1=new_n415 B2=new_n1076 X=new_n1315
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1066 A1=new_n377 A2=new_n1064 C1=new_n1315 X=new_n1316
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1062 B1=new_n415 B2=new_n1060 X=new_n1317
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1070 A1=new_n377 A2=new_n1072 C1=new_n1317 X=new_n1318
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1318 A2=new_n1316 Y=new_n1319
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1319 Y=result[44]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1096 B1=new_n415 B2=new_n1098 X=new_n1321
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1088 A1=new_n377 A2=new_n1086 C1=new_n1321 X=new_n1322
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1084 B1=new_n415 B2=new_n1082 X=new_n1323
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1092 A1=new_n377 A2=new_n1094 C1=new_n1323 X=new_n1324
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1324 A2=new_n1322 Y=new_n1325
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1325 Y=result[45]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1118 B1=new_n415 B2=new_n1120 X=new_n1327
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1110 A1=new_n377 A2=new_n1108 C1=new_n1327 X=new_n1328
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1106 B1=new_n415 B2=new_n1104 X=new_n1329
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1114 A1=new_n377 A2=new_n1116 C1=new_n1329 X=new_n1330
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1330 A2=new_n1328 Y=new_n1331
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1331 Y=result[46]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1140 B1=new_n415 B2=new_n1142 X=new_n1333
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1132 A1=new_n377 A2=new_n1130 C1=new_n1333 X=new_n1334
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1128 B1=new_n415 B2=new_n1126 X=new_n1335
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1136 A1=new_n377 A2=new_n1138 C1=new_n1335 X=new_n1336
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1336 A2=new_n1334 Y=new_n1337
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1337 Y=result[47]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n491 B1=new_n415 B2=new_n453 X=new_n1339
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n395 A1=new_n377 A2=new_n435 C1=new_n1339 X=new_n1340
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n414 B1=new_n358 B2=new_n471 X=new_n1341
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n357 B2=new_n377 A1=new_n376 A2=new_n415 C1=new_n1341 X=new_n1342
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1342 A2=new_n1340 Y=new_n1343
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1343 Y=result[48]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n624 B1=new_n415 B2=new_n642 X=new_n1345
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n549 A1=new_n377 A2=new_n605 C1=new_n1345 X=new_n1346
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n567 B1=new_n415 B2=new_n531 X=new_n1347
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n587 A1=new_n377 A2=new_n513 C1=new_n1347 X=new_n1348
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1348 A2=new_n1346 Y=new_n1349
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1349 Y=result[49]
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n746 B1=new_n415 B2=new_n760 X=new_n1351
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n688 A1=new_n377 A2=new_n732 C1=new_n1351 X=new_n1352
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n702 B1=new_n415 B2=new_n674 X=new_n1353
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n718 A1=new_n377 A2=new_n660 C1=new_n1353 X=new_n1354
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1354 A2=new_n1352 Y=new_n1355
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1355 Y=result[50]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n806 B1=new_n377 B2=new_n864 X=new_n1357
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n850 A1=new_n415 A2=new_n878 C1=new_n1357 X=new_n1358
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n792 B1=new_n377 B2=new_n820 X=new_n1359
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n836 A1=new_n396 A2=new_n778 C1=new_n1359 X=new_n1360
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1360 A2=new_n1358 Y=new_n1361
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1361 Y=result[51]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n898 B1=new_n377 B2=new_n900 X=new_n1363
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n894 A1=new_n358 A2=new_n888 C1=new_n1363 X=new_n1364
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n890 B1=new_n358 B2=new_n896 X=new_n1365
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n884 A1=new_n415 A2=new_n886 C1=new_n1365 X=new_n1366
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1366 A2=new_n1364 Y=new_n1367
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1367 Y=result[52]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n920 B1=new_n377 B2=new_n922 X=new_n1369
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n916 A1=new_n358 A2=new_n910 C1=new_n1369 X=new_n1370
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n912 B1=new_n358 B2=new_n918 X=new_n1371
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n906 A1=new_n415 A2=new_n908 C1=new_n1371 X=new_n1372
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1372 A2=new_n1370 Y=new_n1373
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1373 Y=result[53]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n942 B1=new_n377 B2=new_n944 X=new_n1375
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n938 A1=new_n358 A2=new_n932 C1=new_n1375 X=new_n1376
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n934 B1=new_n358 B2=new_n940 X=new_n1377
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n377 B2=new_n928 A1=new_n415 A2=new_n930 C1=new_n1377 X=new_n1378
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1378 A2=new_n1376 Y=new_n1379
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1379 Y=result[54]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n954 B1=new_n415 B2=new_n964 X=new_n1381
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n960 A1=new_n377 A2=new_n966 C1=new_n1381 X=new_n1382
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n956 B1=new_n415 B2=new_n952 X=new_n1383
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n962 A1=new_n377 A2=new_n950 C1=new_n1383 X=new_n1384
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1384 A2=new_n1382 Y=new_n1385
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1385 Y=result[55]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n976 B1=new_n415 B2=new_n986 X=new_n1387
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n982 A1=new_n377 A2=new_n988 C1=new_n1387 X=new_n1388
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n978 B1=new_n415 B2=new_n974 X=new_n1389
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n984 A1=new_n377 A2=new_n972 C1=new_n1389 X=new_n1390
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1390 A2=new_n1388 Y=new_n1391
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1391 Y=result[56]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=shift[5] A3=new_n998 B1=new_n415 B2=new_n1008 X=new_n1393
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n1004 A1=new_n377 A2=new_n1010 C1=new_n1393 X=new_n1394
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1000 B1=new_n415 B2=new_n996 X=new_n1395
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1006 A1=new_n377 A2=new_n994 C1=new_n1395 X=new_n1396
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1396 A2=new_n1394 Y=new_n1397
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1397 Y=result[57]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n1030 B1=new_n377 B2=new_n1032 X=new_n1399
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n1026 A1=new_n358 A2=new_n1020 C1=new_n1399 X=new_n1400
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1022 B1=new_n415 B2=new_n1018 X=new_n1401
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1028 A1=new_n377 A2=new_n1016 C1=new_n1401 X=new_n1402
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1402 A2=new_n1400 Y=new_n1403
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1403 Y=result[58]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n1052 B1=new_n377 B2=new_n1054 X=new_n1405
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n1048 A1=new_n358 A2=new_n1042 C1=new_n1405 X=new_n1406
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1044 B1=new_n415 B2=new_n1040 X=new_n1407
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1050 A1=new_n377 A2=new_n1038 C1=new_n1407 X=new_n1408
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1408 A2=new_n1406 Y=new_n1409
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1409 Y=result[59]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n1074 B1=new_n377 B2=new_n1076 X=new_n1411
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n1070 A1=new_n358 A2=new_n1064 C1=new_n1411 X=new_n1412
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1066 B1=new_n415 B2=new_n1062 X=new_n1413
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1072 A1=new_n377 A2=new_n1060 C1=new_n1413 X=new_n1414
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1414 A2=new_n1412 Y=new_n1415
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1415 Y=result[60]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n1096 B1=new_n377 B2=new_n1098 X=new_n1417
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n1092 A1=new_n358 A2=new_n1086 C1=new_n1417 X=new_n1418
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1088 B1=new_n415 B2=new_n1084 X=new_n1419
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1094 A1=new_n377 A2=new_n1082 C1=new_n1419 X=new_n1420
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1420 A2=new_n1418 Y=new_n1421
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1421 Y=result[61]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n1118 B1=new_n377 B2=new_n1120 X=new_n1423
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n1114 A1=new_n358 A2=new_n1108 C1=new_n1423 X=new_n1424
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1110 B1=new_n415 B2=new_n1106 X=new_n1425
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1116 A1=new_n377 A2=new_n1104 C1=new_n1425 X=new_n1426
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1426 A2=new_n1424 Y=new_n1427
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1427 Y=result[62]
+.gate sky130_fd_sc_hd__a32o_1                           A1=shift[4] A2=new_n335 A3=new_n1140 B1=new_n377 B2=new_n1142 X=new_n1429
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n396 B2=new_n1136 A1=new_n358 A2=new_n1130 C1=new_n1429 X=new_n1430
+.gate sky130_fd_sc_hd__a32o_1                           A1=new_n334 A2=new_n335 A3=new_n1132 B1=new_n415 B2=new_n1128 X=new_n1431
+.gate sky130_fd_sc_hd__a221o_2                          B1=new_n358 B2=new_n1138 A1=new_n377 A2=new_n1126 C1=new_n1431 X=new_n1432
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1432 A2=new_n1430 Y=new_n1433
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1433 Y=result[63]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n417 A2=new_n493 Y=new_n1435
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1435 Y=result[64]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n569 A2=new_n644 Y=new_n1437
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1437 Y=result[65]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n704 A2=new_n762 Y=new_n1439
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1439 Y=result[66]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n822 A2=new_n880 Y=new_n1441
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1441 Y=result[67]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n892 A2=new_n902 Y=new_n1443
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1443 Y=result[68]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n914 A2=new_n924 Y=new_n1445
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1445 Y=result[69]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n936 A2=new_n946 Y=new_n1447
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1447 Y=result[70]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n958 A2=new_n968 Y=new_n1449
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1449 Y=result[71]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n980 A2=new_n990 Y=new_n1451
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1451 Y=result[72]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1002 A2=new_n1012 Y=new_n1453
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1453 Y=result[73]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1024 A2=new_n1034 Y=new_n1455
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1455 Y=result[74]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1046 A2=new_n1056 Y=new_n1457
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1457 Y=result[75]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1068 A2=new_n1078 Y=new_n1459
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1459 Y=result[76]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1090 A2=new_n1100 Y=new_n1461
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1461 Y=result[77]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1112 A2=new_n1122 Y=new_n1463
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1463 Y=result[78]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1134 A2=new_n1144 Y=new_n1465
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1465 Y=result[79]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1148 A2=new_n1150 Y=new_n1467
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1467 Y=result[80]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1154 A2=new_n1156 Y=new_n1469
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1469 Y=result[81]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1160 A2=new_n1162 Y=new_n1471
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1471 Y=result[82]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1166 A2=new_n1168 Y=new_n1473
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1473 Y=result[83]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1172 A2=new_n1174 Y=new_n1475
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1475 Y=result[84]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1178 A2=new_n1180 Y=new_n1477
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1477 Y=result[85]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1184 A2=new_n1186 Y=new_n1479
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1479 Y=result[86]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1190 A2=new_n1192 Y=new_n1481
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1481 Y=result[87]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1196 A2=new_n1198 Y=new_n1483
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1483 Y=result[88]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1202 A2=new_n1204 Y=new_n1485
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1485 Y=result[89]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1208 A2=new_n1210 Y=new_n1487
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1487 Y=result[90]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1214 A2=new_n1216 Y=new_n1489
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1489 Y=result[91]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1220 A2=new_n1222 Y=new_n1491
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1491 Y=result[92]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1226 A2=new_n1228 Y=new_n1493
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1493 Y=result[93]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1232 A2=new_n1234 Y=new_n1495
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1495 Y=result[94]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1238 A2=new_n1240 Y=new_n1497
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1497 Y=result[95]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1244 A2=new_n1246 Y=new_n1499
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1499 Y=result[96]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1250 A2=new_n1252 Y=new_n1501
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1501 Y=result[97]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1256 A2=new_n1258 Y=new_n1503
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1503 Y=result[98]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1262 A2=new_n1264 Y=new_n1505
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1505 Y=result[99]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1268 A2=new_n1270 Y=new_n1507
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1507 Y=result[100]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1274 A2=new_n1276 Y=new_n1509
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1509 Y=result[101]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1280 A2=new_n1282 Y=new_n1511
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1511 Y=result[102]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1286 A2=new_n1288 Y=new_n1513
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1513 Y=result[103]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1292 A2=new_n1294 Y=new_n1515
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1515 Y=result[104]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1298 A2=new_n1300 Y=new_n1517
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1517 Y=result[105]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1304 A2=new_n1306 Y=new_n1519
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1519 Y=result[106]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1310 A2=new_n1312 Y=new_n1521
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1521 Y=result[107]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1316 A2=new_n1318 Y=new_n1523
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1523 Y=result[108]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1322 A2=new_n1324 Y=new_n1525
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1525 Y=result[109]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1328 A2=new_n1330 Y=new_n1527
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1527 Y=result[110]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1334 A2=new_n1336 Y=new_n1529
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1529 Y=result[111]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1340 A2=new_n1342 Y=new_n1531
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1531 Y=result[112]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1346 A2=new_n1348 Y=new_n1533
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1533 Y=result[113]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1352 A2=new_n1354 Y=new_n1535
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1535 Y=result[114]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1358 A2=new_n1360 Y=new_n1537
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1537 Y=result[115]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1364 A2=new_n1366 Y=new_n1539
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1539 Y=result[116]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1370 A2=new_n1372 Y=new_n1541
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1541 Y=result[117]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1376 A2=new_n1378 Y=new_n1543
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1543 Y=result[118]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1382 A2=new_n1384 Y=new_n1545
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1545 Y=result[119]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1388 A2=new_n1390 Y=new_n1547
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1547 Y=result[120]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1394 A2=new_n1396 Y=new_n1549
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1549 Y=result[121]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1400 A2=new_n1402 Y=new_n1551
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1551 Y=result[122]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1406 A2=new_n1408 Y=new_n1553
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1553 Y=result[123]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1412 A2=new_n1414 Y=new_n1555
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1555 Y=result[124]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1418 A2=new_n1420 Y=new_n1557
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1557 Y=result[125]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1424 A2=new_n1426 Y=new_n1559
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1559 Y=result[126]
+.gate sky130_fd_sc_hd__a22oi_1                          A1=new_n336 B1=shift[6] B2=new_n1430 A2=new_n1432 Y=new_n1561
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n1561 Y=result[127]
+.end

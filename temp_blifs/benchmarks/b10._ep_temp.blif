@@ -1,4 +1,4 @@
-# Benchmark "benchmarks/b10" written by ABC on Mon May  4 14:13:20 2026
+# Benchmark "benchmarks/b10" written by ABC on Mon May 11 10:54:00 2026
 .model benchmarks/b10
 .inputs R_BUTTON G_BUTTON KEY START TEST RTS RTR V_IN_3_ V_IN_2_ V_IN_1_ \
  V_IN_0_
@@ -23,128 +23,115 @@
 .latch       n105  VOTO2_REG  2
 .latch       n110 LAST_G_REG  2
 
-.gate INVx1_ASAP7_75t_L       A=STATO_REG_3_ Y=new_n69_1
-.gate INVx1_ASAP7_75t_L       A=STATO_REG_2_ Y=new_n70
-.gate INVx1_ASAP7_75t_L       A=STATO_REG_1_ Y=new_n71
-.gate AND2x2_ASAP7_75t_L      A=STATO_REG_0_ B=new_n71 Y=new_n72
-.gate AND3x1_ASAP7_75t_L      A=new_n72 B=new_n70 C=STATO_REG_3_ Y=new_n73_1
-.gate NOR3xp33_ASAP7_75t_L    A=STATO_REG_0_ B=new_n71 C=new_n70 Y=new_n74
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n74 B=new_n73_1 A2=new_n69_1 C=V_IN_0_ Y=new_n75
-.gate INVx1_ASAP7_75t_L       A=SIGN_REG_3_ Y=new_n76
-.gate NOR3xp33_ASAP7_75t_L    A=STATO_REG_0_ B=STATO_REG_2_ C=STATO_REG_3_ Y=new_n77_1
-.gate AND2x2_ASAP7_75t_L      A=new_n77_1 B=KEY Y=new_n78
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n76 B=new_n78 A2=STATO_REG_3_ C=STATO_REG_1_ Y=new_n79
-.gate NAND4xp25_ASAP7_75t_L   A=STATO_REG_0_ B=new_n71 C=new_n70 D=STATO_REG_3_ Y=new_n80
-.gate NAND2xp33_ASAP7_75t_L   A=new_n77_1 B=new_n71 Y=new_n81
-.gate INVx1_ASAP7_75t_L       A=STATO_REG_0_ Y=new_n82_1
-.gate NAND4xp25_ASAP7_75t_L   A=new_n82_1 B=STATO_REG_1_ C=STATO_REG_2_ D=RTS Y=new_n83
-.gate AND2x2_ASAP7_75t_L      A=new_n83 B=new_n81 Y=new_n84
-.gate NOR2x1_ASAP7_75t_L      A=STATO_REG_2_ B=STATO_REG_3_ Y=new_n85
-.gate XOR2xp5_ASAP7_75t_L     A=STATO_REG_0_ B=STATO_REG_3_ Y=new_n86
-.gate AOI32xp33_ASAP7_75t_L   A1=new_n86 B1=new_n85 B2=START A2=STATO_REG_1_ A3=new_n70 Y=new_n87_1
-.gate AND3x1_ASAP7_75t_L      A=new_n87_1 B=new_n84 C=new_n80 Y=new_n88
-.gate NAND4xp25_ASAP7_75t_L   A=new_n87_1 B=new_n84 C=new_n80 D=VOTO0_REG Y=new_n89
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n79 B=new_n88 A2=new_n75 C=new_n89 Y=n36
-.gate NAND2xp33_ASAP7_75t_L   A=new_n83 B=new_n81 Y=new_n91_1
-.gate NAND2xp33_ASAP7_75t_L   A=STATO_REG_1_ B=new_n70 Y=new_n92
-.gate NAND4xp25_ASAP7_75t_L   A=V_IN_0_ B=V_IN_1_ C=V_IN_2_ D=V_IN_3_ Y=new_n93
-.gate AND2x2_ASAP7_75t_L      A=new_n93 B=STATO_REG_0_ Y=new_n94
-.gate INVx1_ASAP7_75t_L       A=RTR Y=new_n95
-.gate NAND2xp33_ASAP7_75t_L   A=new_n71 B=new_n95 Y=new_n96_1
-.gate AOI311xp33_ASAP7_75t_L  A1=new_n96_1 B=new_n94 C=new_n69_1 A2=new_n92 A3=new_n82_1 Y=new_n97
-.gate NAND3xp33_ASAP7_75t_L   A=new_n85 B=STATO_REG_0_ C=START Y=new_n98
-.gate AND2x2_ASAP7_75t_L      A=STATO_REG_0_ B=STATO_REG_1_ Y=new_n99
-.gate NAND3xp33_ASAP7_75t_L   A=new_n99 B=STATO_REG_2_ C=new_n95 Y=new_n100
-.gate OR4x2_ASAP7_75t_L       A=new_n71 B=STATO_REG_2_ C=STATO_REG_3_ D=START Y=new_n101_1
-.gate NAND4xp25_ASAP7_75t_L   A=new_n82_1 B=new_n71 C=STATO_REG_2_ D=RTR Y=new_n102
-.gate INVx1_ASAP7_75t_L       A=RTS Y=new_n103
-.gate NAND4xp25_ASAP7_75t_L   A=STATO_REG_0_ B=new_n71 C=STATO_REG_2_ D=new_n103 Y=new_n104
-.gate NAND5xp2_ASAP7_75t_L    A=new_n104 B=new_n102 C=new_n101_1 D=new_n100 E=new_n98 Y=new_n105_1
-.gate OR3x4_ASAP7_75t_L       A=new_n105_1 B=new_n97 C=new_n91_1 Y=new_n106
-.gate NAND2xp33_ASAP7_75t_L   A=new_n82_1 B=STATO_REG_2_ Y=new_n107
-.gate NAND2xp33_ASAP7_75t_L   A=new_n85 B=new_n82_1 Y=new_n108
-.gate INVx1_ASAP7_75t_L       A=VOTO0_REG Y=new_n109
-.gate INVx1_ASAP7_75t_L       A=VOTO3_REG Y=new_n110_1
-.gate NAND4xp25_ASAP7_75t_L   A=VOTO2_REG B=new_n110_1 C=VOTO1_REG D=new_n109 Y=new_n111
-.gate OAI22xp5_ASAP7_75t_L    A1=new_n111 A2=new_n107 B1=new_n108 B2=TEST Y=new_n112
-.gate OAI311xp33_ASAP7_75t_L  A1=new_n105_1 A2=new_n97 A3=new_n91_1 B1=new_n112 C1=new_n71 Y=new_n113
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n106 B=new_n69_1 A2=new_n82_1 C=new_n113 Y=n41
-.gate AOI21xp5_ASAP7_75t_L    A1=new_n111 B=new_n72 A2=new_n82_1 Y=new_n115
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n82_1 B=new_n86 A2=STATO_REG_2_ C=STATO_REG_1_ Y=new_n116
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n115 B=new_n70 A2=new_n106 C=new_n116 Y=n46
-.gate AND2x2_ASAP7_75t_L      A=STATO_REG_1_ B=new_n69_1 Y=new_n118
-.gate NOR3xp33_ASAP7_75t_L    A=new_n105_1 B=new_n97 C=new_n91_1 Y=new_n119
-.gate OR4x2_ASAP7_75t_L       A=new_n105_1 B=new_n97 C=new_n91_1 D=new_n71 Y=new_n120
-.gate AND2x2_ASAP7_75t_L      A=new_n82_1 B=STATO_REG_2_ Y=new_n121
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n82_1 B=new_n121 A2=new_n69_1 C=STATO_REG_1_ Y=new_n122
-.gate OAI311xp33_ASAP7_75t_L  A1=new_n119 A2=new_n118 A3=new_n82_1 B1=new_n122 C1=new_n120 Y=n51
-.gate NAND5xp2_ASAP7_75t_L    A=VOTO2_REG B=new_n110_1 C=VOTO1_REG D=new_n69_1 E=new_n109 Y=new_n124
-.gate NAND3xp33_ASAP7_75t_L   A=new_n124 B=new_n82_1 C=new_n71 Y=new_n125
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=STATO_REG_1_ B=new_n85 A2=STATO_REG_2_ C=new_n82_1 Y=new_n126
-.gate OR4x2_ASAP7_75t_L       A=new_n105_1 B=new_n97 C=new_n91_1 D=new_n82_1 Y=new_n127
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n126 B=new_n119 A2=new_n125 C=new_n127 Y=n56
-.gate INVx1_ASAP7_75t_L       A=V_OUT_REG_3_ Y=new_n129
-.gate AND2x2_ASAP7_75t_L      A=new_n71 B=RTR Y=new_n130
-.gate NOR3xp33_ASAP7_75t_L    A=new_n107 B=STATO_REG_1_ C=new_n95 Y=new_n131
-.gate NAND2xp33_ASAP7_75t_L   A=new_n131 B=VOTO3_REG Y=new_n132
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n130 B=new_n129 A2=new_n121 C=new_n132 Y=n61
-.gate INVx1_ASAP7_75t_L       A=V_OUT_REG_2_ Y=new_n134
-.gate NAND2xp33_ASAP7_75t_L   A=new_n131 B=VOTO2_REG Y=new_n135
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n130 B=new_n134 A2=new_n121 C=new_n135 Y=n65
-.gate INVx1_ASAP7_75t_L       A=V_OUT_REG_1_ Y=new_n137
-.gate NAND2xp33_ASAP7_75t_L   A=new_n131 B=VOTO1_REG Y=new_n138
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n130 B=new_n137 A2=new_n121 C=new_n138 Y=n69
-.gate INVx1_ASAP7_75t_L       A=V_OUT_REG_0_ Y=new_n140
-.gate NAND2xp33_ASAP7_75t_L   A=new_n131 B=VOTO0_REG Y=new_n141
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n130 B=new_n140 A2=new_n121 C=new_n141 Y=n73
-.gate NAND2xp33_ASAP7_75t_L   A=STATO_REG_0_ B=STATO_REG_3_ Y=new_n143
-.gate NOR2x1_ASAP7_75t_L      A=STATO_REG_1_ B=TEST Y=new_n144
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n144 B=new_n76 A2=new_n77_1 C=new_n143 Y=n77
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n74 B=new_n73_1 A2=new_n69_1 C=V_IN_1_ Y=new_n146
-.gate INVx1_ASAP7_75t_L       A=VOTO1_REG Y=new_n147
-.gate NAND4xp25_ASAP7_75t_L   A=new_n147 B=STATO_REG_1_ C=new_n70 D=KEY Y=new_n148
-.gate NAND4xp25_ASAP7_75t_L   A=STATO_REG_0_ B=new_n71 C=new_n70 D=START Y=new_n149
-.gate AND4x2_ASAP7_75t_L      A=new_n149 B=new_n83 C=new_n81 D=new_n80 Y=new_n150
-.gate INVx1_ASAP7_75t_L       A=KEY Y=new_n151
-.gate INVx1_ASAP7_75t_L       A=LAST_G_REG Y=new_n152
-.gate AND2x2_ASAP7_75t_L      A=new_n77_1 B=START Y=new_n153
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n152 B=new_n151 A2=G_BUTTON C=new_n153 Y=new_n154
-.gate AND2x2_ASAP7_75t_L      A=new_n154 B=new_n150 Y=new_n155
-.gate NAND3xp33_ASAP7_75t_L   A=new_n154 B=new_n150 C=VOTO1_REG Y=new_n156
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n148 B=new_n155 A2=new_n146 C=new_n156 Y=n82
-.gate INVx1_ASAP7_75t_L       A=CTR_REG Y=new_n158
-.gate XNOR2xp5_ASAP7_75t_L    A=STATO_REG_1_ B=STATO_REG_2_ Y=new_n159
-.gate NAND2xp33_ASAP7_75t_L   A=new_n71 B=STATO_REG_3_ Y=new_n160
-.gate NAND2xp33_ASAP7_75t_L   A=STATO_REG_1_ B=new_n103 Y=new_n161
-.gate AND3x1_ASAP7_75t_L      A=new_n161 B=new_n160 C=new_n82_1 Y=new_n162
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n162 B=new_n158 A2=new_n159 C=new_n104 Y=n87
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n74 B=new_n73_1 A2=new_n69_1 C=V_IN_3_ Y=new_n164
-.gate XNOR2xp5_ASAP7_75t_L    A=VOTO2_REG B=VOTO0_REG Y=new_n165
-.gate XOR2xp5_ASAP7_75t_L     A=new_n165 B=new_n147 Y=new_n166
-.gate NAND2xp33_ASAP7_75t_L   A=new_n166 B=new_n99 Y=new_n167
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=START B=new_n99 A2=new_n151 C=new_n85 Y=new_n168
-.gate AND2x2_ASAP7_75t_L      A=new_n168 B=new_n150 Y=new_n169
-.gate NAND3xp33_ASAP7_75t_L   A=new_n168 B=new_n150 C=VOTO3_REG Y=new_n170
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n167 B=new_n169 A2=new_n164 C=new_n170 Y=n91
-.gate INVx1_ASAP7_75t_L       A=LAST_R_REG Y=new_n172
-.gate AND2x2_ASAP7_75t_L      A=STATO_REG_1_ B=KEY Y=new_n173
-.gate AND3x1_ASAP7_75t_L      A=new_n173 B=new_n77_1 C=START Y=new_n174
-.gate NAND2xp33_ASAP7_75t_L   A=new_n174 B=R_BUTTON Y=new_n175
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n173 B=new_n172 A2=new_n153 C=new_n175 Y=n96
-.gate INVx1_ASAP7_75t_L       A=CTS_REG Y=new_n177
-.gate OA21x2_ASAP7_75t_L      A1=STATO_REG_0_ B=new_n159 A2=new_n71 Y=new_n178
-.gate NOR3xp33_ASAP7_75t_L    A=new_n82_1 B=STATO_REG_1_ C=new_n69_1 Y=new_n179
-.gate O2A1O1Ixp5_ASAP7_75t_L  A1=STATO_REG_0_ A2=STATO_REG_3_ C=new_n179 B=RTR Y=new_n180
-.gate NOR3xp33_ASAP7_75t_L    A=new_n82_1 B=STATO_REG_1_ C=new_n95 Y=new_n181
-.gate O2A1O1Ixp5_ASAP7_75t_L  A1=STATO_REG_1_ A2=new_n95 C=new_n107 B=new_n160 Y=new_n182
-.gate AOI21xp5_ASAP7_75t_L    A1=new_n181 B=new_n182 A2=new_n85 Y=new_n183
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n180 B=new_n177 A2=new_n178 C=new_n183 Y=n101
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n74 B=new_n73_1 A2=new_n69_1 C=V_IN_2_ Y=new_n185
-.gate OR4x2_ASAP7_75t_L       A=VOTO2_REG B=new_n71 C=STATO_REG_2_ D=new_n151 Y=new_n186
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n172 B=new_n151 A2=R_BUTTON C=new_n153 Y=new_n187
-.gate AND2x2_ASAP7_75t_L      A=new_n187 B=new_n150 Y=new_n188
-.gate NAND3xp33_ASAP7_75t_L   A=new_n187 B=new_n150 C=VOTO2_REG Y=new_n189
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n186 B=new_n188 A2=new_n185 C=new_n189 Y=n105
-.gate NAND2xp33_ASAP7_75t_L   A=new_n174 B=G_BUTTON Y=new_n191
-.gate A2O1A1Ixp33_ASAP7_75t_L A1=new_n173 B=new_n152 A2=new_n153 C=new_n191 Y=n110
+.gate INVx1_ASAP7_75t_L         A=KEY Y=new_n69_1
+.gate INVx1_ASAP7_75t_L         A=TEST Y=new_n70
+.gate INVx1_ASAP7_75t_L         A=VOTO0_REG Y=new_n71
+.gate INVx1_ASAP7_75t_L         A=STATO_REG_3_ Y=new_n72
+.gate INVx1_ASAP7_75t_L         A=STATO_REG_2_ Y=new_n73_1
+.gate INVx1_ASAP7_75t_L         A=STATO_REG_1_ Y=new_n74
+.gate INVx1_ASAP7_75t_L         A=STATO_REG_0_ Y=new_n75
+.gate INVx1_ASAP7_75t_L         A=VOTO1_REG Y=new_n76
+.gate INVx1_ASAP7_75t_L         A=VOTO3_REG Y=new_n77_1
+.gate INVx1_ASAP7_75t_L         A=LAST_R_REG Y=new_n78
+.gate INVx1_ASAP7_75t_L         A=LAST_G_REG Y=new_n79
+.gate NAND2xp33_ASAP7_75t_L     A=new_n74 B=STATO_REG_0_ Y=new_n80
+.gate INVx1_ASAP7_75t_L         A=new_n80 Y=new_n81
+.gate NAND4xp25_ASAP7_75t_L     A=new_n74 B=STATO_REG_0_ C=STATO_REG_3_ D=new_n73_1 Y=new_n82_1
+.gate INVx1_ASAP7_75t_L         A=new_n82_1 Y=new_n83
+.gate NOR2x1_ASAP7_75t_L        A=new_n73_1 B=STATO_REG_0_ Y=new_n84
+.gate AND3x1_ASAP7_75t_L        A=STATO_REG_2_ B=new_n75 C=STATO_REG_1_ Y=new_n85
+.gate NOR2x1_ASAP7_75t_L        A=STATO_REG_3_ B=STATO_REG_2_ Y=new_n86
+.gate NAND2xp33_ASAP7_75t_L     A=new_n75 B=new_n86 Y=new_n87_1
+.gate NAND4xp25_ASAP7_75t_L     A=new_n72 B=new_n73_1 C=new_n75 D=KEY Y=new_n88
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n72 A2=SIGN_REG_3_ C=new_n74 B=new_n88 Y=new_n89
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=new_n72 B=new_n83 D=new_n89 A2=new_n85 C=V_IN_0_ Y=new_n90
+.gate AOI32xp33_ASAP7_75t_L     A1=new_n75 B1=RTS B2=new_n85 A2=new_n86 A3=new_n74 Y=new_n91_1
+.gate NAND2xp33_ASAP7_75t_L     A=new_n73_1 B=STATO_REG_1_ Y=new_n92
+.gate INVx1_ASAP7_75t_L         A=new_n92 Y=new_n93
+.gate NOR2x1_ASAP7_75t_L        A=STATO_REG_3_ B=new_n75 Y=new_n94
+.gate NAND2xp33_ASAP7_75t_L     A=START B=new_n86 Y=new_n95
+.gate INVx1_ASAP7_75t_L         A=new_n95 Y=new_n96_1
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=STATO_REG_3_ B=new_n94 D=new_n96_1 A2=new_n75 C=new_n93 Y=new_n97
+.gate AND3x1_ASAP7_75t_L        A=new_n82_1 B=new_n91_1 C=new_n97 Y=new_n98
+.gate INVx1_ASAP7_75t_L         A=new_n98 Y=new_n99
+.gate OAI22xp5_ASAP7_75t_L      A1=new_n90 A2=new_n98 B1=new_n71 B2=new_n99 Y=n36
+.gate AND4x1_ASAP7_75t_L        A=V_IN_3_ B=V_IN_2_ C=V_IN_1_ D=V_IN_0_ Y=new_n101_1
+.gate AOI21xp33_ASAP7_75t_L     A1=new_n73_1 B=STATO_REG_0_ A2=STATO_REG_1_ Y=new_n102
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=RTR A2=STATO_REG_1_ C=new_n72 B=new_n102 Y=new_n103
+.gate NAND2xp33_ASAP7_75t_L     A=STATO_REG_1_ B=STATO_REG_0_ Y=new_n104
+.gate INVx1_ASAP7_75t_L         A=new_n104 Y=new_n105_1
+.gate NAND2xp33_ASAP7_75t_L     A=new_n72 B=STATO_REG_1_ Y=new_n106
+.gate NAND4xp25_ASAP7_75t_L     A=STATO_REG_2_ B=new_n75 C=RTR D=new_n74 Y=new_n107
+.gate INVx1_ASAP7_75t_L         A=new_n107 Y=new_n108
+.gate OR3x1_ASAP7_75t_L         A=RTS B=new_n73_1 C=new_n80 Y=new_n109
+.gate INVx1_ASAP7_75t_L         A=new_n109 Y=new_n110_1
+.gate NOR2x1_ASAP7_75t_L        A=new_n108 B=new_n110_1 Y=new_n111
+.gate OA331x1_ASAP7_75t_L       A1=RTR B1=START C1=new_n111 B2=STATO_REG_2_ B3=new_n106 A2=new_n73_1 A3=new_n104 Y=new_n112
+.gate OAI211xp5_ASAP7_75t_L     A1=new_n75 A2=new_n95 B=new_n112 C=new_n91_1 Y=new_n113
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n75 A2=new_n101_1 C=new_n113 B=new_n103 Y=new_n114
+.gate INVx1_ASAP7_75t_L         A=new_n114 Y=new_n115
+.gate AND4x1_ASAP7_75t_L        A=new_n71 B=VOTO1_REG C=new_n77_1 D=VOTO2_REG Y=new_n116
+.gate NAND2xp33_ASAP7_75t_L     A=new_n84 B=new_n116 Y=new_n117
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=TEST A2=new_n87_1 C=STATO_REG_1_ B=new_n117 Y=new_n118
+.gate NAND2xp33_ASAP7_75t_L     A=new_n115 B=new_n118 Y=new_n119
+.gate INVx1_ASAP7_75t_L         A=new_n119 Y=new_n120
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=STATO_REG_0_ A2=new_n114 C=new_n120 B=STATO_REG_3_ Y=new_n121
+.gate INVx1_ASAP7_75t_L         A=new_n121 Y=n41
+.gate OAI21xp33_ASAP7_75t_L     A1=STATO_REG_0_ A2=new_n116 B=new_n80 Y=new_n123
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=STATO_REG_3_ B=new_n94 D=new_n85 A2=new_n75 C=STATO_REG_1_ Y=new_n124
+.gate INVx1_ASAP7_75t_L         A=new_n124 Y=new_n125
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n114 A2=new_n123 C=new_n125 B=STATO_REG_2_ Y=new_n126
+.gate INVx1_ASAP7_75t_L         A=new_n126 Y=n46
+.gate AOI331xp33_ASAP7_75t_L    A1=new_n72 B1=STATO_REG_0_ C1=new_n85 B2=new_n106 B3=new_n115 A2=STATO_REG_1_ A3=new_n75 Y=new_n128
+.gate OAI21xp33_ASAP7_75t_L     A1=new_n74 A2=new_n115 B=new_n128 Y=n51
+.gate NAND2xp33_ASAP7_75t_L     A=new_n74 B=new_n75 Y=new_n130
+.gate AOI21xp33_ASAP7_75t_L     A1=new_n75 B=new_n85 A2=new_n86 Y=new_n131
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=new_n72 B=new_n130 D=new_n114 A2=new_n116 C=new_n131 Y=new_n132
+.gate AO21x2_ASAP7_75t_L        A1=STATO_REG_0_ A2=new_n114 B=new_n132 Y=n56
+.gate AO22x1_ASAP7_75t_L        A1=VOTO3_REG A2=new_n108 B1=V_OUT_REG_3_ B2=new_n107 Y=n61
+.gate AO22x1_ASAP7_75t_L        A1=VOTO2_REG A2=new_n108 B1=V_OUT_REG_2_ B2=new_n107 Y=n65
+.gate AO22x1_ASAP7_75t_L        A1=VOTO1_REG A2=new_n108 B1=V_OUT_REG_1_ B2=new_n107 Y=n69
+.gate AO22x1_ASAP7_75t_L        A1=VOTO0_REG A2=new_n108 B1=V_OUT_REG_0_ B2=new_n107 Y=n73
+.gate NOR2x1_ASAP7_75t_L        A=new_n72 B=new_n75 Y=new_n138
+.gate NAND2xp33_ASAP7_75t_L     A=new_n70 B=new_n74 Y=new_n139
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n87_1 A2=new_n139 C=new_n138 B=SIGN_REG_3_ Y=new_n140
+.gate INVx1_ASAP7_75t_L         A=new_n140 Y=n77
+.gate AND3x1_ASAP7_75t_L        A=KEY B=new_n76 C=new_n93 Y=new_n142
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=new_n72 B=new_n83 D=new_n142 A2=new_n85 C=V_IN_1_ Y=new_n143
+.gate NAND2xp33_ASAP7_75t_L     A=START B=new_n73_1 Y=new_n144
+.gate OAI211xp5_ASAP7_75t_L     A1=new_n80 A2=new_n144 B=new_n82_1 C=new_n91_1 Y=new_n145
+.gate AND3x1_ASAP7_75t_L        A=new_n75 B=new_n86 C=START Y=new_n146
+.gate AOI321xp33_ASAP7_75t_L    A1=G_BUTTON B1=new_n69_1 C=new_n145 B2=new_n146 A2=new_n79 A3=new_n146 Y=new_n147
+.gate INVx1_ASAP7_75t_L         A=new_n147 Y=new_n148
+.gate OAI22xp5_ASAP7_75t_L      A1=new_n143 A2=new_n147 B1=new_n76 B2=new_n148 Y=n82
+.gate OAI21xp33_ASAP7_75t_L     A1=new_n73_1 A2=STATO_REG_1_ B=new_n92 Y=new_n150
+.gate OAI221xp5_ASAP7_75t_L     A1=RTS A2=new_n74 B1=new_n72 B2=STATO_REG_1_ C=new_n75 Y=new_n151
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n150 A2=new_n151 C=new_n110_1 B=CTR_REG Y=new_n152
+.gate INVx1_ASAP7_75t_L         A=new_n152 Y=n87
+.gate NAND2xp33_ASAP7_75t_L     A=new_n71 B=VOTO2_REG Y=new_n154
+.gate OAI21xp33_ASAP7_75t_L     A1=new_n71 A2=VOTO2_REG B=new_n154 Y=new_n155
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n71 A2=VOTO2_REG C=VOTO1_REG B=new_n154 Y=new_n156
+.gate INVx1_ASAP7_75t_L         A=new_n156 Y=new_n157
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n76 A2=new_n155 C=new_n104 B=new_n157 Y=new_n158
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=new_n72 B=new_n83 D=new_n158 A2=new_n85 C=V_IN_3_ Y=new_n159
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=new_n69_1 B=new_n105_1 D=new_n145 A2=START C=new_n86 Y=new_n160
+.gate INVx1_ASAP7_75t_L         A=new_n160 Y=new_n161
+.gate OAI22xp5_ASAP7_75t_L      A1=new_n159 A2=new_n160 B1=new_n77_1 B2=new_n161 Y=n91
+.gate AND3x1_ASAP7_75t_L        A=KEY B=STATO_REG_1_ C=new_n146 Y=new_n163
+.gate INVx1_ASAP7_75t_L         A=new_n163 Y=new_n164
+.gate AO22x1_ASAP7_75t_L        A1=R_BUTTON A2=new_n163 B1=LAST_R_REG B2=new_n164 Y=n96
+.gate OAI221xp5_ASAP7_75t_L     A1=new_n73_1 A2=STATO_REG_1_ B1=new_n74 B2=STATO_REG_0_ C=new_n92 Y=new_n166
+.gate AND3x1_ASAP7_75t_L        A=new_n74 B=STATO_REG_0_ C=STATO_REG_3_ Y=new_n167
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=STATO_REG_3_ A2=STATO_REG_0_ C=new_n167 B=RTR Y=new_n168
+.gate INVx1_ASAP7_75t_L         A=new_n168 Y=new_n169
+.gate AO331x2_ASAP7_75t_L       A1=STATO_REG_3_ A2=new_n74 A3=new_n84 B1=RTR B2=new_n81 B3=new_n86 C=new_n108 Y=new_n170
+.gate O2A1O1Ixp5_ASAP7_75t_L    A1=new_n166 A2=new_n169 C=new_n170 B=CTS_REG Y=new_n171
+.gate INVx1_ASAP7_75t_L         A=new_n171 Y=n101
+.gate OR3x1_ASAP7_75t_L         A=new_n69_1 B=VOTO2_REG C=new_n92 Y=new_n173
+.gate INVx1_ASAP7_75t_L         A=new_n173 Y=new_n174
+.gate A2O1A1O1Ixp25_ASAP7_75t_L A1=new_n72 B=new_n83 D=new_n174 A2=new_n85 C=V_IN_2_ Y=new_n175
+.gate AOI321xp33_ASAP7_75t_L    A1=R_BUTTON B1=new_n69_1 C=new_n145 B2=new_n146 A2=new_n78 A3=new_n146 Y=new_n176
+.gate NAND2xp33_ASAP7_75t_L     A=VOTO2_REG B=new_n176 Y=new_n177
+.gate OAI21xp33_ASAP7_75t_L     A1=new_n175 A2=new_n176 B=new_n177 Y=n105
+.gate AO22x1_ASAP7_75t_L        A1=G_BUTTON A2=new_n163 B1=LAST_G_REG B2=new_n164 Y=n110
 .end

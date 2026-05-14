@@ -86,7 +86,7 @@ class GateSelectionEnv(gym.Env):
                 out_gen.write(line + '\n')
 
         # Execute the mapping command using ABC
-        abc_cmd = f"wsl abc -c 'read {output_genlib_file}; read {self.design}; map -a; write {temp_blif}; read {lib_origin}; read -m {temp_blif}; ps; topo; upsize; dnsize; stime;'"
+        abc_cmd = f"wsl abc -c 'read {output_genlib_file}; read {self.design}; amap; write {temp_blif}; read {lib_origin}; read -m {temp_blif}; ps; topo; upsize; dnsize; stime;'"
         try:
             res = subprocess.check_output(abc_cmd, shell=True, text=True)
             match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", res)
@@ -104,7 +104,7 @@ class GateSelectionEnv(gym.Env):
             return float('-inf')
         normalized_delay = delay / self.max_delay
         normalized_area = area / self.max_area
-        return -np.sqrt(normalized_delay * normalized_area)
+        return -normalized_area
 
     def reset(self):
         self.state = np.zeros(self.total_gates, dtype=int)
@@ -134,6 +134,7 @@ class DQNNetwork(nn.Module):
 class DQNAgent:
     def __init__(self, state_size, action_size, learning_rate=0.001):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print(self.device)
         self.model = DQNNetwork(state_size, action_size).to(self.device)
         self.optimizer = optim.Adam(self.model.parameters(), lr=learning_rate)
         self.gamma = 0.99
@@ -174,9 +175,9 @@ def train_agent(num_episodes, agent, env, batch_size, buffer_size):
     replay_buffer = deque(maxlen=buffer_size)
     highest_reward = float('-inf')
     
-    # Lists to store ADP values (MAB_EP tracking mimicry)
-    episode_adp = []
-    best_adp_over_time = []
+    # Lists to store Area values (MAB_EP tracking mimicry)
+    episode_area = []
+    best_area_over_time = []
 
     for episode in range(num_episodes):
         state = env.reset()
@@ -197,11 +198,11 @@ def train_agent(num_episodes, agent, env, batch_size, buffer_size):
                 else:
                     adp = delay * area
                     
-                episode_adp.append(adp)
-                if best_adp_over_time:
-                    best_adp_over_time.append(min(best_adp_over_time[-1], adp))
+                episode_area.append(area)
+                if best_area_over_time:
+                    best_area_over_time.append(min(best_area_over_time[-1], area))
                 else:
-                    best_adp_over_time.append(adp)
+                    best_area_over_time.append(area)
                 
                 if reward > highest_reward:
                     highest_reward = reward
@@ -214,7 +215,7 @@ def train_agent(num_episodes, agent, env, batch_size, buffer_size):
 
         print(f"Episode {episode + 1}, Episode Reward = {episode_reward:.4f}, Highest Reward = {highest_reward:.4f}")
 
-    return episode_adp, best_adp_over_time
+    return episode_area, best_area_over_time
 
 
 genlib_origin = sys.argv[-1]
@@ -227,7 +228,7 @@ lib_path = "gen_newlibs/"
 os.makedirs("temp_blifs", exist_ok=True)
 os.makedirs("gen_newlibs", exist_ok=True)
 
-abc_cmd = "read %s;read %s; map -a; write %s; read %s;read -m %s; ps; topo; upsize; dnsize; stime; " % (genlib_origin, design, temp_blif, lib_origin, temp_blif)
+abc_cmd = "read %s;read %s; amap; write %s; read %s;read -m %s; ps; topo; upsize; dnsize; stime; " % (genlib_origin, design, temp_blif, lib_origin, temp_blif)
 res = subprocess.check_output(('wsl', 'abc', '-c', abc_cmd))
 match_d = re.search(r"Delay\s*=\s*([\d.]+)\s*ps", str(res))
 match_a = re.search(r"Area\s*=\s*([\d.]+)", str(res))
@@ -245,7 +246,7 @@ f.close()
 total_gates = len(f_lines)
 state_size = total_gates
 action_size = total_gates
-num_episodes = 3000
+num_episodes = 1000
 batch_size = 10
 buffer_size = 10000
 
@@ -253,41 +254,41 @@ env = GateSelectionEnv(genlib_origin, lib_path, design, total_gates, sample_gate
 agent = DQNAgent(state_size, action_size)
 
 start=time.time()
-episode_adp, best_adp_over_time = train_agent(num_episodes, agent, env, batch_size, buffer_size)
+episode_area, best_area_over_time = train_agent(num_episodes, agent, env, batch_size, buffer_size)
 end=time.time()
 
 runtime=end-start
 print('Total time: ', runtime)
 
-# --- Generate ADP Optimization Plot (Mimicking MAB_EP) ---
-print("\n>> Generating ADP Optimization Plot...")
+# --- Generate Area Optimization Plot (Mimicking MAB_EP) ---
+print("\n>> Generating Area Optimization Plot...")
 os.makedirs("random_test", exist_ok=True)
 plt.figure(figsize=(10, 6))
 
 episodes_x = list(range(num_episodes))
-baseline_adp = max_delay * max_area
+baseline_area = max_area
 
-# Calculate normalized Best ADP tracking
-clean_best_adp = [val/baseline_adp if val != float('inf') else baseline_adp/baseline_adp for val in best_adp_over_time]
-plt.plot(episodes_x, clean_best_adp, label='Best ADP Over Time', color='blue', linewidth=2.5)
+# Calculate normalized Best Area tracking
+clean_best_area = [val/baseline_area if val != float('inf') else baseline_area/baseline_area for val in best_area_over_time]
+plt.plot(episodes_x, clean_best_area, label='Best Area Over Time', color='blue', linewidth=2.5)
 
-# Scatter sample episode valid ADPs
-valid_adps = [(idx, val/baseline_adp) for idx, val in enumerate(episode_adp) if val != float('inf')]
-if valid_adps:
-    x_vals, y_vals = zip(*valid_adps)
-    plt.scatter(x_vals, y_vals, color='red', alpha=0.3, label='Episode Sampled ADP', s=15)
+# Scatter sample episode valid Areas
+valid_areas = [(idx, val/baseline_area) for idx, val in enumerate(episode_area) if val != float('inf')]
+if valid_areas:
+    x_vals, y_vals = zip(*valid_areas)
+    plt.scatter(x_vals, y_vals, color='red', alpha=0.3, label='Episode Sampled Area', s=15)
 
-plt.axhline(y=baseline_adp/baseline_adp, color='green', linestyle='--', linewidth=2, label='Baseline ADP')
+plt.axhline(y=baseline_area/baseline_area, color='green', linestyle='--', linewidth=2, label='Baseline Area')
 
-plt.title(f"Batched DQN ADP Optimization\nState: Gate Selection (Design: {design})")
+plt.title(f"Batched DQN Area Optimization\nState: Gate Selection (Design: {design})")
 plt.xlabel("Training Episodes")
-plt.ylabel("Area-Delay Product (ADP)")
+plt.ylabel("Area")
 plt.legend()
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.tight_layout()
 
-# Add training time and best ADP annotation
-plt.text(0.8, 0.98, f'Training Time: {runtime:.2f}s\nBest ADP: {clean_best_adp[-1]:.2f}', transform=plt.gca().transAxes, fontsize=10, verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
+# Add training time and best Area annotation
+plt.text(0.8, 0.98, f'Training Time: {runtime:.2f}s\nBest Area: {clean_best_area[-1]:.2f}', transform=plt.gca().transAxes, fontsize=10, verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
 # Generate matching dynamic file name
 try:
@@ -300,6 +301,6 @@ try:
 except Exception:
     lib_name = lib_origin[:-4]
 
-output_path = f"random_test/dqn_{num_episodes}_{design_name}_{sample_gate}_{lib_name}.png"
+output_path = f"random_test/dqn_{num_episodes}_{design_name}_{sample_gate}_{lib_name}_area.png"
 plt.savefig(output_path, dpi=300)
 print(f">> Visualization successfully saved to {output_path}")
