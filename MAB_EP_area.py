@@ -66,36 +66,43 @@ def calculate_reward(max_delay, max_area, delay, area):
     normalized_delay = delay / max_delay
     normalized_area = area / max_area
 
-    return -normalized_area
+    return 1 - normalized_area
 
 
   # Epsilon-Greedy MAB Class
 class EpsilonGreedyMAB:
-  def __init__(self, num_arms, epsilon, sample_gate):
-    self.num_arms = num_arms
-    self.epsilon = epsilon  # Exploration vs Exploitation factor (0 to 1)
-    self.q_values = [0.0] * num_arms  # Estimated average reward for each arm
-    self.counts = [0] * num_arms  # Number of times each arm was selected
-    self.sample_gate = sample_gate
-  def select_action(self):
-    selected_cells = set()  
-    
-    while len(selected_cells) < self.sample_gate:
-        if random.random() > self.epsilon:
-            select = (np.argmax(self.q_values))
-        # If prob falls in epsilon range, do exploration
-        else:
-            select = (random.randint(0, self.num_arms - 1))
-    
-        if select not in selected_cells:
-            selected_cells.add(select)
+    def __init__(self, num_arms, epsilon, sample_gate):
+        self.num_arms = num_arms
+        self.epsilon = epsilon  
+        self.q_values = [0.0] * num_arms  
+        self.counts = [0] * num_arms  
+        self.sample_gate = sample_gate
 
-    return list(selected_cells)
+    def select_action(self):
+        selected_cells = set()
+        
+        # Sort indices by highest Q-value
+        sorted_q_indices = np.argsort(self.q_values)[::-1]
+        
+        while len(selected_cells) < self.sample_gate:
+            if random.random() > self.epsilon:
+                # EXPLOIT: Find the best arm that isn't already selected
+                for arm in sorted_q_indices:
+                    if arm not in selected_cells:
+                        selected_cells.add(arm)
+                        break
+            else:
+                # EXPLORE: Pure random selection
+                random_arm = random.randint(0, self.num_arms - 1)
+                selected_cells.add(random_arm)
+                
+        return list(selected_cells)
 
-  def update(self, selected_arm, reward):
-      for arm in selected_arm:
+    def update(self, selected_arm, reward):
+        for arm in selected_arm:
             self.counts[arm] += 1
-            self.q_values[arm] = (self.q_values[arm] * self.counts[arm] + reward) / self.counts[arm]
+            # FIXED: Correct incremental average formula
+            self.q_values[arm] += (reward - self.q_values[arm]) / self.counts[arm]
 
 
 # Initialization
@@ -117,7 +124,7 @@ episode_area = []
 best_area_over_time = []
 
 # Main Loop
-num_iterations = 1001
+num_iterations = 100
 
 for i in range(num_iterations):
   print("Iteration: ", i)
@@ -141,7 +148,6 @@ for i in range(num_iterations):
       best_result = (delay, area)
       print("Current best result: ", best_result)
       best_cells = selected_cells
-      print("Current best cells: ", best_cells)
   mab.update(selected_cells, reward)
 end=time.time()
 runtime=end-start
@@ -177,7 +183,7 @@ plt.tight_layout()
 # Add training time and best Area annotation
 plt.text(0.8, 0.98, f'Training Time: {runtime:.2f}s\nBest Area: {clean_best_area[-1]:.2f}', transform=plt.gca().transAxes, fontsize=10, verticalalignment='top', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
-output_path = f"random_test/mab_ep_{num_iterations}_{design.split('/')[1].split('.')[0]}_{sample_gate}_{lib_origin[:-4]}_area.png"
+output_path = f"newtest/mab_ep_{num_iterations}_{design.split('/')[1].split('.')[0]}_{sample_gate}_{lib_origin[:-4]}_area.png"
 plt.savefig(output_path, dpi=300)
 print(f">> Visualization successfully saved to {output_path}")
 

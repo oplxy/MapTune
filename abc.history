@@ -8,3 +8,6 @@ read_lib 7nm.lib
 amap
 -h amap
 amap -h
+read gen_newlibs/benchmarks/bar.blif_83_ep_samplelib.genlib
+read_genlib gen_newlibs/benchmarks/bar.blif_83_ep_samplelib.genlib
+read benchmarks/bar.blif
